@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="action.php" method="post" enctype="multipart/form-data">
+      <label for="usernamne">Username:</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="please enter your username"
+        minlength="3"
+        maxlength="15"
+      />
+      <label for="password">Paswword</label>
+      <input type="password" id="password" minlength="3" maxlength="15" />
+
+      <label for="email">email:</label>
+      <input type="email" id="email" placeholder="sss@gmail.com" />
+      <br />
+      <label for="phone">Phone:</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="1234-xxxx-xxxx"
+        pattern="[0-9]{3}[0-9]{4}[0-9]{4}"
+      />
+      <label for="bday">birthday</label>
+      <input type="date" id="bday" />
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="1" max="100" value="70" />
+
+      <label for="title">Title:</label>
+
+      <label for="Mr.">Mr.</label>
+      <input type="radio" id="Mrs" value="Mr." name="title" />
+      <label for="Ms.">Ms.</label>
+      <input type="radio" value="Ms." name="title" id="Ms." />
+      <label for="pHD">PHD.</label>
+      <input type="radio" value="PHD." name="title" id="pHD" />
+
+      <label for="color">Color:</label>
+      <input type="color" id="color" />
+
+      <label for="payment">Payment:</label>
+      <select name="" id="payment" required>
+        <option value="visa">visa</option>
+        <option value="mastercard">mastercard</option>
+        <option value="paypal">paypal</option>
+        <option value="wechat">wechat</option>
+      </select>
+
+      <label for="subscribe">Subscribe</label>
+      <input type="checkbox" id="subscribe" />
+
+      <label for="comment">Comment:</label>
+      <textarea name="" id="comment" cols="30" rows="10"></textarea>
+
+      <label for="file">file</label>
+      <input type="file" id="file" accept="image/*" />
+
+      <input type="reset" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
