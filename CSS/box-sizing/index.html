@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box——siziing 中 border-box 和 content box的区别</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      main {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid black;
+        margin-top: 20px;
+      }
+
+      .content-box {
+        box-sizing: content-box;
+      }
+
+      .border-box {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Box Sizing 示例</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Border Box</h2>
+        <div class="box border-box">
+          <p>宽度: 200px</p>
+          <p>高度: 100px</p>
+          <p>内边距: 20px</p>
+          <p>边框: 5px</p>
+        </div>
+
+        <section>
+          <h2>Content Box</h2>
+          <div class="box content-box">
+            <p>宽度: 200px</p>
+            <p>高度: 100px</p>
+            <p>内边距: 20px</p>
+            <p>边框: 5px</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      // 分别获取 border-box 和 content-box 的元素
+      const borderBox = document.querySelector('.border-box');
+      const contentBox = document.querySelector('.content-box');
+
+      // 计算并显示 border-box 的实际宽度和高度
+      const borderBoxWidth = borderBox.offsetWidth;
+      const borderBoxHeight = borderBox.offsetHeight;
+
+      console.log('Border Box 宽度:', borderBoxWidth);
+      console.log('Border Box 高度:', borderBoxHeight);
+
+      // 计算并显示 content-box 的实际宽度和高度
+      const contentBoxWidth = contentBox.offsetWidth;
+      const contentBoxHeight = contentBox.offsetHeight;
+
+      console.log('Content Box 宽度:', contentBoxWidth);
+      console.log('Content Box 高度:', contentBoxHeight);
+    </script>
+  </body>
+</html>

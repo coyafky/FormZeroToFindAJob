@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>博客文章</title>
+    <style>
+      /* 重置默认样式 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      main {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      article h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+
+      article p {
+        font-size: 1em;
+        margin-bottom: 15px;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      /* 使用 ::selection 伪元素选择器自定义选中文本的样式 */
+      ::selection {
+        background-color: #e50000; /* 红色背景 */
+        color: #fff; /* 白色文本 */
+      }
+
+      /* 也可以为特定的元素应用不同的选中样式 */
+      article p::selection {
+        background-color: #007bff; /* 蓝色背景 */
+        color: #fff; /* 白色文本 */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>我的博客</h1>
+    </header>
+
+    <main>
+      <article>
+        <h2>文章标题</h2>
+        <p>
+          这是一个段落，用户在选中这段文本时，选中的文本将具有自定义的背景颜色和文本颜色。
+        </p>
+        <p>
+          这是另一个段落，用户在选中这段文本时，选中的文本也将具有自定义的背景颜色和文本颜色。
+        </p>
+        <p>
+          这是第三个段落，用户在选中这段文本时，选中的文本也将具有自定义的背景颜色和文本颜色。
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 我的博客</p>
+    </footer>
+  </body>
+</html>

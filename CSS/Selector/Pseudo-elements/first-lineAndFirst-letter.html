@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .enhanced-paragraph {
+        font-size: 1em;
+        line-height: 1.5;
+        color: #333;
+        margin: 20px 0;
+      }
+      .enhanced-paragraph::first-line {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #e50000;
+        text-transform: uppercase;
+      }
+      .enhanced-paragraph::first-letter {
+        color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <p class="enhanced-paragraph">
+          这是一个段落，我们希望增强它的第一行。通过使用 `::first-line`
+          伪元素选择器，我们可以轻松地为段落的第一行应用特殊样式。
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child selector</title>
+    <style>
+      /* 寻找的是 box上的 span 元素 */
+      /* 后代选择器是以空格分割的 */
+      .box span {
+        color: aqua;
+      }
+
+      .content {
+        color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 希望选择 div -->
+    <div class="home">
+      <p>I am the p element</p>
+      <div class="box">
+        <span> hahaha</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="desc">
+        <p>
+          <span> cocococ </span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 不希望选择 div -->
+    <span> wsdbnwujsdh </span>
+
+    <div>
+      <span> edfbygdyeudgye </span>
+    </div>
+  </body>
+</html>

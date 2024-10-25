@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* a 元素从未没有被访问过 */
+      a:link {
+        color: red;
+      }
+
+      a:visited {
+        color: rgb(226, 226, 17);
+      }
+
+      /* 鼠标悬浮在a元素上 */
+      a:hover {
+        color: cyan;
+      }
+
+      /* 点击了但是还没松手 */
+      a:active {
+        color: purple;
+      }
+      /* focus 处于焦点状态  可以使用Tag聚焦div元素*/
+      a:focus {
+        color: greenyellow;
+      }
+
+      input:focus {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.mi.com/index.html">小米</a>
+    <a href="https://www.baidu.com/">百度</a>
+    <input type="text" />
+  </body>
+</html>

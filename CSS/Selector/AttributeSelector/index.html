@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 存在选择器：选择具有指定属性的元素。 */
+    [href] {
+      color: red;
+      text-decoration: none;
+    }
+    /* [href] 选择了 所有元素中具备 href属性的 元素 （标记红色和取消下划线）*/
+
+    /* 开头匹配选择器：选择属性值以指定字符串开头的元素。 */
+    [href^='https'] {
+      background-color: lightblue;
+    }
+
+    /* 结尾匹配选择器：选择属性值以指定字符串结尾的元素。 */
+    [href$='.pdf'] {
+      color: green;
+    }
+
+    /* 包含选择器：选择属性值包含指定字符串的元素。
+ */
+    [class*='btn'] {
+      background-color: yellow;
+    }
+
+    /* 空格分隔选择器：选择属性值中包含以空格分隔的指定字符串的元素 */
+    [class~='warning'] {
+      border: 1px solid red;
+    }
+    /* 连字符分隔选择器：选择属性值中包含以连字符分隔的指定字符串的元素。 */
+    [lang|='en'] {
+      font-style: italic;
+    }
+  </style>
+  <body>
+    <a href="https://example.com">Example</a>
+    <a href="http://example.com">Example</a>
+    <a href="https://example.com/file.pdf">PDF</a>
+    <a href="https://example.com/file.doc">DOC</a>
+    <div class="btn btn-primary">Button</div>
+    <div class="btn-secondary">Button</div>
+    <div class="warning">Warning</div>
+    <div class="alert warning">Alert</div>
+    <div lang="en">English</div>
+    <div lang="en-US">English (US)</div>
+  </body>
+</html>

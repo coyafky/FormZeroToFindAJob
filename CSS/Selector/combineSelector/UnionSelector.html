@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>并集选择器实践</title>
+
+    <style>
+      /* 使用并集选择器为多个元素应用相同的样式 */
+      h1,
+      h2,
+      p {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: red;
+      }
+
+      /* 为标题和段落应用不同的样式 */
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1em;
+        margin-bottom: 15px;
+      }
+
+      /* 为 footer 中的段落应用不同的样式 */
+      footer p {
+        font-size: 0.8em;
+        color: #666;
+        text-align: center;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>主标题</h1>
+    </header>
+
+    <main>
+      <h2>子标题 1</h2>
+      <p>这是一个段落。</p>
+      <h2>子标题 2</h2>
+      <p>这是另一个段落。</p>
+      <h2>子标题 3</h2>
+      <p>这是第三个段落。</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 并集选择器实践</p>
+    </footer>
+  </body>
+</html>
