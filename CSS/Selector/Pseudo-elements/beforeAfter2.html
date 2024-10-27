@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box{
+        font-size: 20px;
+
+      }
+      /* 同样的 主元素 使用font-size 可以改变 该伪元素 添加内容的样式 */
+
+      .box::before{
+        content: "123";
+      }
+
+      .box::after{
+        content: "321";
+      }
+      /* 这个插入的元素和主元素是存在一个空格的 */
+
+      /* 伪元素可以插入内容 也可以 插入图标  content ：url() */
+
+      .box5::after{
+       /* 8x8  */
+       content:"" ;
+        /* 使用伪元素的过程中，不能将content省略  否则 伪元素就会消失 */
+       /* display: inline-block; */
+       width: 8px;
+       height: 8px;
+       color: red;
+      }
+    </style>
+  </head>
+  <body>
+<!--     
+    <div class="box">
+      <span class="first">before</span>
+      我是 div 元素
+      <span class="second"> after </span>
+    </div> -->
+   
+    <!-- 插入方式一
+   
+     <div class="box">
+      <span class="first">before</span>
+      我是 div 元素
+      <span class="second"> after </span>
+    </div>
+  -->
+    <!-- <div class="box2">
+      span
+      <span class="first">before</span>
+      我是 div 元素
+      <span class="second"> after </span>
+      我是 box2
+    </div> -->
+    <!-- 这种小图标的话经常是使用 如果使用 每一个 span来插入的话比较麻烦 可以使用伪元素来实现 -->
+
+    <!-- 插入方式二  -->
+     <div class="box">
+      我是 div
+     </div>
+
+
+     <div class="box4">
+  
+      我是 box4
+     </div>
+
+     <!-- 伪元素的补充 -->
+
+     <div class="box5">
+      我是 box5
+     </div>
+  </body>
+</html>
+</body>
+</html>
