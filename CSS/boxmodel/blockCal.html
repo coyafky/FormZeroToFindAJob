@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Box Width and Height Verification</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        margin: 10px;
+        border: 5px solid black;
+        box-sizing: border-box; /* 使用 border-box 盒子模型 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="myBox">This is a box with border-box box-sizing.</div>
+
+    <button onclick="verifyBoxSize()">Verify Box Size</button>
+
+    <script>
+      function verifyBoxSize() {
+        // 获取元素
+        const box = document.getElementById('myBox');
+
+        // 获取 border-box 的宽度和高度
+        const borderBoxWidth = box.offsetWidth;
+        const borderBoxHeight = box.offsetHeight;
+
+        // 输出结果
+        console.log(`Border-box Width: ${borderBoxWidth}px`);
+        console.log(`Border-box Height: ${borderBoxHeight}px`);
+
+        // 验证宽度和高度
+        if (borderBoxWidth === 200 && borderBoxHeight === 100) {
+          alert('The box width and height are as expected (200px x 100px).');
+        } else {
+          alert('The box width and height are NOT as expected.');
+        }
+      }
+    </script>
+  </body>
+</html>

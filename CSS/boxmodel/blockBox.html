@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Boxes Example</title>
+    <style>
+        .container {
+            width: 500px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .block-box {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid darkblue;
+        }
+
+        .block-box-no-width {
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block-box" style="width: 200px; height: 100px;">
+            Block Box with Width and Height
+        </div>
+        <div class="block-box-no-width">
+            Block Box without Width
+        </div>
+        <div class="block-box" style="width: 300px; height: 150px;">
+            Another Block Box with Width and Height
+        </div>
+    </div>
+</body>
+</html>

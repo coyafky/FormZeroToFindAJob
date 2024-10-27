@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      height: 200px;
+      background-color: red;
+      color: white;
+      display: inline-block;
+    }
+
+    /* 修改div元素的特性 */
+    /* 通过层叠性自己写的display 来替代浏览器写的 display block */
+    /* 得到同一行显示 */
+
+    span{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <span>
+      我是span元素
+    </span>
+    <a href="https://baidu.com">
+      baidu
+    </a>
+  </div>
+
+  <span>
+    我是span元素
+    <a href="https://geogle.com">谷歌</a>
+  </span>
+</body>
+</html>
