@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text {
+        position: relative;
+
+        bottom: 120px;
+        right: 120px;
+
+        /* 默认使用 bottom right 或者  top left */
+      }
+      /* relative 定位参照的对象是 元素自己原来的位置 */
+      /* 使用 position 和使用 margin-left的区别是，不影响其他元素的标准流布局 */
+      /* 使用的场景是 在不影响其他元素的位置的前提下，对当前的元素的位置进行微调 */
+    </style>
+  </head>
+  <body>
+    <span> 我是span元素 </span>
+    <strong class="text"> 我是strong元素 </strong>
+    <img src="./image/Kobe_Bryant_8.jpg" alt="" srcset="" />
+    <div>我是div元素</div>
+  </body>
+</html>

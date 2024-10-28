@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        background-color: orange;
+        overflow: auto;
+        /* height: 100px; */
+      }
+      .item {
+        width: 400px;
+        height: 200px;
+        box-sizing: border-box;
+        border: 1px solid #000000;
+        float: left;
+        background-color: red;
+      }
+/* 
+      .clear_fix::after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+      } */
+
+      /* 设置了 float 浮动元素 脱离标准流 ，高度没有汇报给父元素 ，所以父元素的高度为0 ，但是存在BFC
+        绝对定位元素也是脱离标准流的元素（所以 设置BFC这个高度塌陷的问题是不准确的）
+
+       解决方法：
+     
+       给父元素设置 overflow:auto;
+      
+        形成了新的BFC
+        条件：container 的 height auto (默认值)
+
+        BFC是auto上是如何计算高度的
+        
+      */
+    </style>
+  </head>
+  <body>
+    <div class="container clear_fix">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

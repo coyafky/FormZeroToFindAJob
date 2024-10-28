@@ -1,0 +1,41 @@
+!<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1000px;
+        height: 1000px;
+        background-color: blueviolet;
+        position: relative;
+      }
+
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: aqua;
+        /* position: relative; */
+      }
+
+      .text {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        /* 默认使用 bottom right 或者  top left */
+      }
+      /* 如果相对的是父元素 */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <span> 我是span元素 </span>
+        <strong class="text"> 我是strong元素 </strong>
+        <img src="./image/Kobe_Bryant_8.jpg" alt="" srcset="" />
+        <div>我是div元素</div>
+      </div>
+    </div>
+  </body>
+</html>
