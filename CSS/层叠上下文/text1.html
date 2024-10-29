@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+      p {
+        position: absolute;
+        font-size: 20px;
+        width: 100px;
+        height: 100px;
+      }
+      .a {
+        background-color: blue;
+        z-index: 1;
+      }
+      .b {
+        background-color: yellowgreen;
+        z-index: 2;
+        top: 20px;
+        left: 20px;
+      }
+      .c {
+        background-color: cyan;
+        z-index: 3;
+        top: -20px;
+        left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="a">a</p>
+      <p class="b">b</p>
+    </div>
+
+    <div>
+      <p class="c">c</p>
+    </div>
+  </body>
+  <!-- 父元素div都没有设置z-index，所以不会产生层叠上下文，所以.a、.b、.c都处于由<html></html>标签产生的“根层叠上下文”中，属于同一个层叠上下文，此时谁的z-index值大，谁在上面。 -->
+  </html>
+

@@ -1,0 +1,50 @@
+<style>
+  div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  .box1 {
+    z-index: 2;
+  }
+  .box2 {
+    z-index: 1;
+  }
+  p {
+    position: absolute;
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+  }
+  .a {
+    background-color: blue;
+    z-index: 100;
+  }
+  .b {
+    background-color: green;
+    top: 20px;
+    left: 20px;
+    z-index: 200;
+  }
+  .c {
+    background-color: red;
+    top: -20px;
+    left: 40px;
+    z-index: 9999;
+  }
+</style>
+
+<body>
+  <div class="box1">
+    <p class="a">a</p>
+    <p class="b">b</p>
+  </div>
+
+  <div class="box2">
+    <p class="c">c</p>
+  </div>
+</body>
+
+<!-- 我们发下，虽然p.c元素的z-index值为9999，远大于p.a和p.b的z-index值，但是由于p.a、p.b的父元素div.box1产生的层叠上下文的z-index的值为2，p.c的父元素div.box2所产生的层叠上下文的z-index值为1，所以p.c永远在p.a和p.b下面。
+同时，如果我们只更改p.a和p.b的z-index值，由于这两个元素都在父元素div.box1产生的层叠上下文中，所以，谁的z-index值大，谁在上面。
+ -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Wrap Example</title>
+    <style>
+      /* 容器样式 */
+      .container {
+        display: flex; /* 使用Flex布局 */
+        flex-direction: row; /* 主轴为水平方向 */
+        width: 900px; /* 容器宽度 */
+        flex-wrap: wrap; /* 子元素换行，且行的堆叠方向为从上到下 */
+        height: auto; /* 容器高度自适应 */
+        background-color: #f0f0f0; /* 容器背景颜色 */
+        border: 2px solid #ccc; /* 容器边框 */
+        padding: 10px; /* 容器内边距 */
+      }
+
+      /* 子元素样式 */
+      .box {
+        width: 100px; /* 子元素宽度 */
+        height: 100px; /* 子元素高度 */
+        background-color: cyan; /* 子元素背景颜色 */
+        color: wheat; /* 子元素文字颜色 */
+        text-align: center; /* 子元素文字居中 */
+        line-height: 100px; /* 子元素文字垂直居中 */
+        border: 1px solid #000; /* 子元素边框 */
+        margin: 5px; /* 子元素外边距 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 容器 -->
+    <div class="container">
+      <!-- 子元素 -->
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+    </div>
+  </body>
+</html>

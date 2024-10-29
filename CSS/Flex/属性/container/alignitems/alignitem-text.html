@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Align Items Example</title>
+  <style>
+    /* 容器样式 */
+    .container {
+      display: flex; /* 使用Flex布局 */
+      flex-direction: row; /* 主轴为水平方向 */
+      height: 300px; /* 容器高度 */
+      background-color: #f0f0f0; /* 容器背景颜色 */
+      border: 2px solid #ccc; /* 容器边框 */
+      padding: 10px; /* 容器内边距 */
+      margin-bottom: 20px; /* 容器间距 */
+    }
+
+    /* 子元素样式 */
+    .box {
+      width: 100px; /* 子元素宽度 */
+      height: 100px; /* 子元素高度 */
+      background-color: cyan; /* 子元素背景颜色 */
+      color: wheat; /* 子元素文字颜色 */
+      text-align: center; /* 子元素文字居中 */
+      line-height: 100px; /* 子元素文字垂直居中 */
+      border: 1px solid #000; /* 子元素边框 */
+      margin: 5px; /* 子元素外边距 */
+    }
+
+    /* 不同align-items设置 */
+    .container.align-start {
+      align-items: flex-start; /* 子元素在侧轴起点对齐 */
+    }
+
+    .container.align-end {
+      align-items: flex-end; /* 子元素在侧轴终点对齐 */
+    }
+
+    .container.align-center {
+      align-items: center; /* 子元素在侧轴中心对齐 */
+    }
+
+    .container.align-stretch {
+      align-items: stretch; /* 子元素在侧轴上拉伸 */
+    }
+
+    .container.align-baseline {
+      align-items: baseline; /* 子元素在侧轴基线对齐 */
+    }
+  </style>
+</head>
+<body>
+  <h2>align-items: flex-start</h2>
+  <div class="container align-start">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>align-items: flex-end</h2>
+  <div class="container align-end">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>align-items: center</h2>
+  <div class="container align-center">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>align-items: stretch</h2>
+  <div class="container align-stretch">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>align-items: baseline</h2>
+  <div class="container align-baseline">
+    <div class="box" style="height: 80px;">1</div>
+    <div class="box" style="height: 120px;">2</div>
+    <div class="box" style="height: 100px;">3</div>
+  </div>
+</body>
+</html>

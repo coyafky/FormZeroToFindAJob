@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Align Content Example</title>
+  <style>
+    /* 容器样式 */
+    .container {
+      display: flex; /* 使用Flex布局 */
+      flex-wrap: wrap; /* 子元素换行 */
+      height: 400px; /* 容器高度 */
+      background-color: #f0f0f0; /* 容器背景颜色 */
+      border: 2px solid #ccc; /* 容器边框 */
+      padding: 10px; /* 容器内边距 */
+      margin-bottom: 20px; /* 容器间距 */
+    }
+
+    /* 子元素样式 */
+    .box {
+      width: 100px; /* 子元素宽度 */
+      height: 100px; /* 子元素高度 */
+      background-color: cyan; /* 子元素背景颜色 */
+      color: wheat; /* 子元素文字颜色 */
+      text-align: center; /* 子元素文字居中 */
+      line-height: 100px; /* 子元素文字垂直居中 */
+      border: 1px solid #000; /* 子元素边框 */
+      margin: 5px; /* 子元素外边距 */
+    }
+
+    /* 不同align-content设置 */
+    .container.align-content-start {
+      align-content: flex-start; /* 多行子元素在侧轴起点对齐 */
+    }
+
+    .container.align-content-end {
+      align-content: flex-end; /* 多行子元素在侧轴终点对齐 */
+    }
+
+    .container.align-content-center {
+      align-content: center; /* 多行子元素在侧轴中心对齐 */
+    }
+
+    .container.align-content-space-between {
+      align-content: space-between; /* 多行子元素在侧轴上均匀分布，第一行在起点，最后一行在终点 */
+    }
+
+    .container.align-content-space-around {
+      align-content: space-around; /* 多行子元素在侧轴上均匀分布，每行子元素两侧的间距相等 */
+    }
+
+    .container.align-content-space-evenly {
+      align-content: space-evenly; /* 多行子元素在侧轴上均匀分布，每行子元素之间的间距相等 */
+    }
+
+    .container.align-content-stretch {
+      align-content: stretch; /* 多行子元素在侧轴上拉伸，填满整个侧轴的空间 */
+    }
+  </style>
+</head>
+<body>
+  <h2>align-content: flex-start</h2>
+  <div class="container align-content-start">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+
+  <h2>align-content: flex-end</h2>
+  <div class="container align-content-end">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+
+  <h2>align-content: center</h2>
+  <div class="container align-content-center">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+
+  <h2>align-content: space-between</h2>
+  <div class="container align-content-space-between">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+
+  <h2>align-content: space-around</h2>
+  <div class="container align-content-space-around">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+
+  <h2>align-content: space-evenly</h2>
+  <div class="container align-content-space-evenly">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+
+  <h2>align-content: stretch</h2>
+  <div class="container align-content-stretch">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-grow: row nowrap;
+        width: 1000px;
+        height: 100px;
+        background-color: orange;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        border: 1px solid darkcyan;
+        color: wheat;
+      }
+      .box1 {
+        flex-grow: 1;
+      }
+      .box5 {
+        flex-grow: 1;
+      }
+      /* .box3{
+        flex-grow: 2;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box">2</div>
+      <div class="box3">3</div>
+      <div class="box">4</div>
+      <div class="box box5">5</div>
+    </div>
+  </body>
+</html>

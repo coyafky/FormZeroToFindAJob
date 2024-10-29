@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Basis Example</title>
+    <style>
+      /* Flex容器样式 */
+      .flex-box {
+        width: 400px; /* 容器宽度 */
+        border: 1px solid red; /* 容器边框 */
+        height: 400px; /* 容器高度 */
+        display: flex; /* 使用Flex布局 */
+      }
+
+      /* Flex项目样式 */
+      .flex-item1,
+      .flex-item2 {
+        width: 100px; /* 项目宽度 */
+        height: 100px; /* 项目高度 */
+        border: 1px solid black; /* 项目边框 */
+        text-align: center; /* 项目文字居中 */
+        line-height: 100px; /* 项目文字垂直居中 */
+      }
+
+      /* 不同flex-basis设置 */
+      .flex-item1 {
+        flex-grow: 1; /* 项目在空间充足时扩展 */
+        flex-basis: 100px; /* 项目初始宽度 */
+      }
+
+      .flex-item2 {
+        flex-basis: 200px; /* 项目初始宽度 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-box">
+      <div class="flex-item1">Item 1</div>
+      <div class="flex-item2">Item 2</div>
+    </div>
+  </body>
+</html>
