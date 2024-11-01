@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header > h1 {
+  color: purple;
+  text-align: center;
+}
+main {
+  padding: 20px;
+  margin-bottom: 60px; /* 为导航栏留出空间 */
+}
+
+
+.navbar-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #555;
+  transform: translateY(-5px);
+  color: yellow;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-item:hover a {
+  color: yellow;
+}

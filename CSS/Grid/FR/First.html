@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #ffeedd;
+        width: 100vw;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 100px auto 100px;
+        grid-template-rows: 50px 50px;
+        grid-gap: 5px;
+        width: 100%;
+      }
+      .container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: #ffeedd;
+      }
+
+      .container > div:nth-child(1n) {
+        background-color: #96ceb4;
+      }
+
+      .container > div:nth-child(3n) {
+        background-color: #88d8b0;
+      }
+
+      .container > div:nth-child(2n) {
+        background-color: #ff6f69;
+      }
+
+      .container > div:nth-child(4n) {
+        background-color: #ffcc5c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>

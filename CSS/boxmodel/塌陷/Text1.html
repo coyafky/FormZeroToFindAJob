@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Collapse Solutions</title>
+    <style>
+        /* 默认情况下发生塌陷 */
+        .parent {
+            background-color: lightgray;
+        }
+        
+        /* 给父盒子添加 border */
+        .parent-border {
+            border: 1px solid black;
+        }
+        
+        /* 给父盒子添加 padding-top */
+        .parent-padding {
+            padding-top: 1px;
+        }
+        
+        /* 给父盒子添加 overflow: hidden */
+        .parent-overflow {
+            overflow: hidden;
+        }
+        
+        .child {
+            margin-top: 30px;
+            background-color: lightcoral;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h3>默认外边距塌陷</h3>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <h3>父盒子添加 border 解决塌陷</h3>
+    <div class="parent parent-border">
+        <div class="child"></div>
+    </div>
+
+    <h3>父盒子添加 padding-top 解决塌陷</h3>
+    <div class="parent parent-padding">
+        <div class="child"></div>
+    </div>
+
+    <h3>父盒子添加 overflow: hidden 解决塌陷</h3>
+    <div class="parent parent-overflow">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

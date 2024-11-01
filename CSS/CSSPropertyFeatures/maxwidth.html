@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        max-width: 400px; /* 最大宽度为400px */
+        min-width: 300px; /* 最小宽度为300px */
+        border: 1px solid #ccc; /* 边框 */
+        border-radius: 8px; /* 圆角 */
+        overflow: hidden; /* 隐藏溢出内容 */
+        margin: 20px; /* 外边距 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+      }
+
+      .card-image {
+        max-width: 100%; /* 图片最大宽度为100% */
+        height: auto; /* 高度自动 */
+      }
+
+      .card-content {
+        padding: 16px; /* 内边距 */
+      }
+
+      .card-title {
+        font-size: 1.5em; /* 标题字体大小 */
+        margin: 0; /* 去除默认外边距 */
+      }
+
+      .card-description {
+        font-size: 1em; /* 描述字体大小 */
+        margin: 8px 0; /* 上下外边距 */
+      }
+
+      .card-button {
+        min-width: 100px; /* 最小宽度为100px */
+        min-height: 40px; /* 最小高度为40px */
+        background-color: #007bff; /* 按钮背景色 */
+        color: white; /* 按钮文字颜色 */
+        border: none; /* 去除边框 */
+        border-radius: 4px; /* 圆角 */
+        cursor: pointer; /* 鼠标指针样式 */
+        padding: 10px; /* 内边距 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="https://via.placeholder.com/300"
+        alt="示例图片"
+        class="card-image"
+      />
+      <div class="card-content">
+        <h2 class="card-title">卡片标题</h2>
+        <p class="card-description">
+          这是卡片的描述内容。它可以包含一些文本信息。
+        </p>
+        <button class="card-button">点击我</button>
+      </div>
+    </div>
+  </body>
+</html>

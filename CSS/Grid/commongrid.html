@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      @media (min-width: 768px) {
+        .grid-container {
+          grid-template-columns: repeat(3, 1fr); /* 3列 */
+        }
+      }
+
+      /* 网格项 */
+      .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 图片样式 */
+      .image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem; /* 圆角 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          class="image"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

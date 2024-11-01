@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Bottom Navbar</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      body {
+        height: 200vh;
+        background-color: #f0f4f7;
+        font-family: 'Poppins', Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .navbar-container {
+        z-index: 10;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #2e3c54;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav_wrapper {
+        z-index: 1000;
+        position: relative;
+      }
+
+      .nav_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      .menu_items {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      .menu_item-wrapper {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .menu_item-link {
+        z-index: 2;
+        border-radius: 0.75rem;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        display: flex;
+        position: relative;
+        text-decoration: none;
+        color: #e3f1ff;
+      }
+
+      .menu_item-link:hover {
+        background-color: #4a5a75;
+        transform: translateY(-3px);
+        color: #ffcc00;
+      }
+
+      .content_section {
+        padding: 2rem;
+        flex: 1;
+      }
+
+      .content_section h1 {
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .content_section p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .content_section p:last-of-type {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content_section">
+      <h1>Welcome to Our Website</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+        scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+        congue eget, auctor vitae massa.
+      </p>
+      <p>
+        Fusce ut placerat orci nulla pellentesque dignissim enim. Mauris blandit
+        aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo,
+        lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula
+        sed magna dictum porta.
+      </p>
+      <p>
+        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin
+        eget tortor risus. Proin eget tortor risus. Vivamus suscipit tortor eget
+        felis porttitor volutpat.
+      </p>
+    </div>
+
+    <header class="navbar-container">
+      <div class="nav_wrapper">
+        <div class="nav_section">
+          <nav class="menu_items">
+            <div class="menu_item-wrapper">
+              <a href="javascript:void(0)" class="menu_item-link">
+                <div class="menu_item-text">Services</div>
+              </a>
+              <a href="javascript:void(0)" class="menu_item-link">
+                <div class="menu_item-text">About Us</div>
+              </a>
+              <a href="javascript:void(0)" class="menu_item-link">
+                <div class="menu_item-text">Support</div>
+              </a>
+              <a href="javascript:void(0)" class="menu_item-link">
+                <div class="menu_item-text">Resources</div>
+              </a>
+              <a href="javascript:void(0)" class="menu_item-link">
+                <div class="menu_item-text">Blogs</div>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

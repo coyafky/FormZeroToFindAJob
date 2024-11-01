@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Inheritance</title>
+    <style>
+      body {
+        font-family: sans-serif; /* 可继承 */
+        color: green; /* 可继承 */
+        font-size: 16px; /* 可继承 */
+        margin: 20px; /* 不可继承 */
+      }
+      p {
+        font-size: 18px; /* 覆盖继承的 font-size */
+        margin-bottom: 10px; /* 不可继承 */
+      }
+      span {
+        color: blue; /* 覆盖继承的 color */
+      }
+      div {
+        margin: 10px; /* 不可继承 */
+        color: inherit; /* 强制继承 body 的 color */
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <div>This is a div with a <span>span</span> inside.</div>
+  </body>
+</html>

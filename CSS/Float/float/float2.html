@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: 0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        padding: 10px;
+        /* 符合规则二 ，只能到边缘的位置 */
+      }
+
+      .item1,
+      .item2 {
+        background-color: red;
+      }
+
+      .item1 {
+        /* 脱离标准流 */
+        float: left;
+        background-color: greenyellow;
+      }
+
+      .item2 {
+        float: right;
+        background-color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+    </div>
+  </body>
+</html>

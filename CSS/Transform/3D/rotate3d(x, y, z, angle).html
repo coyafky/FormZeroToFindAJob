@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotate3d Example</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        perspective: 1000px; /* 设置透视效果 */
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #333445;
+        transform: rotate3d(1, 1, 1, 45deg);
+        /* 页面加载时，box 会沿向量 (1, 1, 1) 定义的轴旋转45度。 */
+        transition: transform 0.5s ease;
+      }
+      .box:hover {
+        transform: rotate3d(1, 1, 1, 90deg);
+      }
+      /* 当鼠标悬停在 box 上时，box 会平滑地沿向量 (1, 1, 1) 定义的轴旋转90度 */
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

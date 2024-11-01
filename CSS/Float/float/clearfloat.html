@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>清除 float 元素的影响</title>
+    <style>
+      /* 全局样式 */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      section.container {
+        margin-bottom: 40px;
+        border: 1px solid black;
+      }
+
+      .float-left {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      .float-right {
+        float: right;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+      /* .clear {
+        clear: both; /* 清除左右浮动 */
+      */
+
+      /* 清除浮动的方法 */
+      /* 1. 使用 clear 属性 */
+      .clear {
+        clear: both; /* 清除左右浮动 */
+      }
+      /* 2. 使用伪元素 */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>清除 float 元素的影响</h1>
+    </header>
+
+    <main>
+      <section class="container clearfix">
+        <div class="float-left">左浮动元素</div>
+        <div class="float-right">右浮动元素</div>
+      </section>
+
+      <section class="container">
+        <div class="float-left">左浮动元素</div>
+        <div class="float-right">右浮动元素</div>
+        <div class="clear">清除浮动</div>
+      </section>
+    </main>
+  </body>
+</html>

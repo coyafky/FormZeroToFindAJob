@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition Example with Opacity</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        opacity: 0.1;
+        transition: opacity 2s ease-in-out; /* 过渡效果 */
+      }
+      .box:hover {
+        opacity: 1; /* 鼠标悬停时，透明度变为 1 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

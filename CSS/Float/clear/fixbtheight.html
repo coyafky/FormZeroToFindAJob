@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear Float by Fixed Height</title>
+    <style>
+      /* 定义颜色变量 */
+      :root {
+        --bg-container: #f0f0f0;
+        --bg-left: #ffcccc;
+        --bg-right: #ccffcc;
+        --bg-secondary: #ccccff;
+      }
+
+      /* 清除浮动的第一种方式：设置父元素的固定高度 */
+      .height-clear-float {
+        height: 100px;
+      }
+
+      .height-box1 {
+        width: 200px;
+        margin-bottom: 10px;
+        background: var(--bg-container);
+      }
+
+      .left {
+        float: left;
+        width: 25%;
+        height: 50px;
+        background: var(--bg-left);
+      }
+
+      .right {
+        float: right;
+        width: 25%;
+        height: 75px;
+        background: var(--bg-right);
+      }
+
+      .height-box2 {
+        width: 200px;
+        height: 100px;
+        background: var(--bg-secondary);
+        text-align: center;
+        line-height: 100px;
+      }
+
+      .button {
+        padding: 10px 20px;
+        background-color: #1890ff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="height-box1 height-clear-float">
+      <div class="left">Left</div>
+      <div class="right">Right</div>
+    </div>
+    <div class="height-box2">box2</div>
+    <br />
+    <button class="button">重置</button>
+  </body>
+</html>

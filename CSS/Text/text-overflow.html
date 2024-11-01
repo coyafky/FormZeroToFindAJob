@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+      }
+      p {
+        width: 200px;
+        border: 1px solid #000;
+        padding: 2px 5px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .overflow-clip {
+        text-overflow: clip;
+      }
+      .overflow-ellipsis {
+        text-overflow: ellipsis;
+      }
+      .overflow-string {
+        text-overflow: '[..]';
+      }
+
+      .ltr > p {
+        direction: ltr;
+      }
+
+      .rtl > p {
+        direction: rtl;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ltr">
+      <h2>Left to Right</h2>
+      <pre>clip</pre>
+      <p class="overflow-clip">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        sed dolorum sapiente, laborum commodi magnam enim. Mollitia delectus
+        blanditiis, nobis quae ducimus molestiae. Autem nisi excepturi,
+        consequatur labore ratione pariatur?
+      </p>
+      <pre>ellipsis</pre>
+      <p class="overflow-ellipsis">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        sed dolorum sapiente, laborum commodi magnam enim. Mollitia delectus
+        blanditiis, nobis quae ducimus molestiae. Autem nisi excepturi,
+        consequatur labore ratione pariatur?
+      </p>
+      <pre>"[..]"</pre>
+      <p class="overflow-string">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        sed dolorum sapiente, laborum commodi magnam enim. Mollitia delectus
+        blanditiis, nobis quae ducimus molestiae. Autem nisi excepturi,
+        consequatur labore ratione pariatur?
+      </p>
+    </div>
+    <div class="rtl">
+      <h2>Right to Left</h2>
+      <pre>clip</pre>
+      <p class="overflow-clip">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        sed dolorum sapiente, laborum commodi magnam enim. Mollitia delectus
+        blanditiis, nobis quae ducimus molestiae. Autem nisi excepturi,
+        consequatur labore ratione pariatur?
+      </p>
+      <pre>ellipsis</pre>
+      <p class="overflow-ellipsis">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        sed dolorum sapiente, laborum commodi magnam enim. Mollitia delectus
+        blanditiis, nobis quae ducimus molestiae. Autem nisi excepturi,
+        consequatur labore ratione pariatur?
+      </p>
+      <pre>"[..]"</pre>
+      <p class="overflow-string">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        sed dolorum sapiente, laborum commodi magnam enim. Mollitia delectus
+        blanditiis, nobis quae ducimus molestiae. Autem nisi excepturi,
+        consequatur labore ratione pariatur?
+      </p>
+    </div>
+  </body>
+</html>

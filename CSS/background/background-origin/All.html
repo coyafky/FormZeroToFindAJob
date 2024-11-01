@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Origin Example</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        border: 10px solid rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        background-image: url('./image/Gaj4OAbbIAAuHCO.jpeg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: white;
+        text-align: center;
+        line-height: 200px;
+        font-size: 18px;
+      }
+
+      .padding-box {
+        background-origin: padding-box;
+      }
+
+      .border-box {
+        background-origin: border-box;
+      }
+
+      .content-box {
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box padding-box">Padding Box</div>
+    <div class="box border-box">Border Box</div>
+    <div class="box content-box">Content Box</div>
+  </body>
+</html>

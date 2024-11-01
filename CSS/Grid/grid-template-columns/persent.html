@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Layout</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .grid-container {
+        display: grid;
+        width: 80%; /* 容器宽度基于视口宽度 */
+        grid-template-columns: 25% 50% 25%; /* 三列宽度百分比分配 */
+        gap: 10px;
+        background-color: #f0f0f0;
+        padding: 10px;
+      }
+
+      .item {
+        background-color: #4a90e2;
+        color: white;
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item item1">Sidebar</div>
+      <div class="item item2">Main Content</div>
+      <div class="item item3">Sidebar</div>
+    </div>
+  </body>
+</html>

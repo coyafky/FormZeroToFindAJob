@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 100px 200px 300px;
+        /* 设置的是每列的宽度分别是100px 200px 300px */
+        gap: 10px;
+        background-color: #f0f;
+        padding: 10px;
+      }
+      .item {
+        background-color: #4a90e2;
+        color: white;
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+  </body>
+</html>

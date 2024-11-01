@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition Example</title>
+    <style>
+      .container {
+        width: 600px;
+        height: 200px;
+        background-color: #ccc;
+        margin: 0 auto;
+        display: flex; /* 使用 Flexbox 布局 */
+        justify-content: space-around; /* 子元素均匀分布 */
+        align-items: center; /* 子元素垂直居中 */
+      }
+      .items {
+        width: 100px;
+        height: 100px;
+        transition: all 2s; /* 过渡效果 */
+      }
+      .ease {
+        background-color: red;
+        transition-timing-function: ease;
+      }
+      .ease:hover {
+        background-color: blue;
+        width: 200px;
+      }
+      .ease-in-out {
+        background-color: yellow;
+        transition-timing-function: ease-in-out;
+      }
+      .ease-in-out:hover {
+        background-color: blue;
+        width: 200px;
+      }
+      .ease-out {
+        background-color: green;
+        transition-timing-function: ease-out;
+      }
+      .ease-out:hover {
+        background-color: blue;
+        width: 200px;
+      }
+      .linear {
+        background-color: black;
+        transition-timing-function: linear;
+      }
+      .linear:hover {
+        background-color: blue;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items linear"></div>
+      <div class="items ease"></div>
+      <div class="items ease-in-out"></div>
+      <div class="items ease-out"></div>
+    </div>
+  </body>
+</html>

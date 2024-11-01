@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Animation with Play/Pause</title>
+    <style>
+      .ball {
+        width: 100px;
+        height: 100px;
+        background-color: cyan;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        animation: moveball 5s ease infinite;
+      }
+
+      @keyframes moveball {
+        form {
+          left: 0;
+        }
+        to {
+          left: calc(100% - 100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+    <button id="toggleButton">Pause</button>
+    <script>
+      const ball = document.querySelector('.ball');
+      const toggleButton = document.getElementById('toggleButton');
+
+      let isPaused = false;
+
+      function toggleAnimation() {
+        if (isPaused) {
+          ball.style.animationPlayState = 'running';
+          toggleButton.textContent = 'Pause';
+        } else {
+          ball.style.animationPlayState = 'paused';
+          toggleButton.textContent = 'Play';
+        }
+        isPaused = !isPaused; // 切换状态
+      }
+      // 为按钮添加点击事件监听器
+      toggleButton.addEventListener('click', toggleAnimation);
+    </script>
+  </body>
+</html>

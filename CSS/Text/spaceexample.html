@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-spacing 和 letter-spacing 示例</title>
+    <style>
+        .container {
+            font-family: sans-serif;
+        }
+        .letter-spacing {
+            letter-spacing: 0.5cm;
+        }
+        .word-spacing {
+            word-spacing: 1cm;
+        }
+        .both {
+            letter-spacing: 0.2cm;
+            word-spacing: 0.5cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>原始文本: Hello world, 你好世界！</p>
+        <p class="letter-spacing">letter-spacing: H e l l o   w o r l d ,   你 好 世 界 ！</p>
+        <p class="word-spacing">word-spacing: Hello   world,   你好世界！</p>
+        <p class="both">letter-spacing & word-spacing: H e l l o   w o r l d ,   你 好 世 界 ！</p>
+    </div>
+</body>
+</html>
