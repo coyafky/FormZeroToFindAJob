@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>透明效果示例</title>
+  <style>
+    /* 容器样式 */
+    .container {
+      width: 300px;
+      padding: 20px;
+      margin: 20px;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    /* 使用 rgba() 透明背景 */
+    .rgba-bg {
+      background-color: rgba(255, 0, 0, 0.5); /* 半透明红色背景 */
+    }
+
+    /* 使用 opacity 透明度 */
+    .opacity-bg {
+      background-color: red; /* 不透明红色背景 */
+      opacity: 0.5; /* 元素及其内容半透明 */
+    }
+
+    /* 子元素样式 */
+    .child {
+      padding: 10px;
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container rgba-bg">
+    使用 rgba() 背景透明
+    <div class="child">
+      子元素不会继承透明效果
+    </div>
+  </div>
+
+  <div class="container opacity-bg">
+    使用 opacity 透明度
+    <div class="child">
+      子元素会继承透明效果
+    </div>
+  </div>
+</body>
+</html>

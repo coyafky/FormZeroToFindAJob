@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>非 inline-block 元素的水平间距</title>
+    <style>
+      .box {
+        display: inline-block; /* 设置为 inline-block */
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div 元素设置为 inline-block 后之间有默认的水平间隙 -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>

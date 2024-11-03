@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a标签伪类执行顺序示例</title>
+    <style>
+      /* 1. link: 未访问的链接样式 */
+      a:link {
+        color: blue;
+        text-decoration: none;
+      }
+
+      /* 2. visited: 已访问的链接样式 */
+      a:visited {
+        color: purple;
+      }
+
+      /* 3. hover: 鼠标悬停样式 */
+      a:hover {
+        color: orange;
+        text-decoration: underline;
+      }
+
+      /* 4. active: 激活状态（鼠标点击时）样式 */
+      a:active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>请点击以下链接来测试伪类样式的执行顺序：</p>
+
+    <a href="https://www.example.com" target="_blank">访问 Example 网站</a>
+  </body>
+</html>

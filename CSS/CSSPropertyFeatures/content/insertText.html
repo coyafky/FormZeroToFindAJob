@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    /* .example {
+      /* width: 200px;
+    height: 200px; 
+    } */
+    .example::before {
+      content: 'Before';
+      background-color: lightblue;
+    }
+    .example::after {
+      content: 'After';
+      background-color: lightcoral;
+    }
+  </style>
+  <body>
+    <p class="example">this is a paragraph.</p>
+  </body>
+</html>

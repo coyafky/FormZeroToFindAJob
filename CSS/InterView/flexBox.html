@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Height Adaptation with Flexbox</title>
+    <style>
+      .container {
+        display: flex; /* 父容器使用弹性布局 */
+        flex-direction: column; /* 垂直排列 */
+        height: 100vh; /* 父容器高度自适应 */
+        background-color: lightgray;
+      }
+      .top {
+        height: 100px;
+        background-color: lightblue;
+      }
+      .bottom {
+        flex: 1; /* 子容器填充剩余空间 */
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">Top Div (100px)</div>
+      <div class="bottom">Bottom Div (Fill Remaining Height)</div>
+    </div>
+  </body>
+</html>

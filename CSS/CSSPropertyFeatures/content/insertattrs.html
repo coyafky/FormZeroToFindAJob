@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS attr() 示例</title>
+    <style>
+      /* 显示元素的 title 属性值 */
+      .title-attr::after {
+        content: ' (' attr(title) ')'; /* 使用 attr() 引用 title 属性的值 */
+        color: gray;
+        font-style: italic;
+      }
+
+      /* 显示链接的 href 属性值 */
+      .link-attr::after {
+        content: ' [' attr(href) ']'; /* 使用 attr() 引用 href 属性的值 */
+        color: blue;
+        font-size: 0.9em;
+      }
+
+      /* 显示自定义属性 data-info 的值 */
+      .data-attr::before {
+        content: attr(data-info) ' - '; /* 使用 attr() 引用 data-* 属性的值 */
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 使用 title 属性 -->
+    <p class="title-attr" title="这是段落的标题">这个段落包含 title 属性。</p>
+
+    <!-- 使用 href 属性 -->
+    <a class="link-attr" href="https://www.example.com">链接到 Example 网站</a>
+
+    <!-- 使用自定义 data-* 属性 -->
+    <p class="data-attr" data-info="信息内容">
+      这是一个带有自定义数据属性的段落。
+    </p>
+  </body>
+</html>

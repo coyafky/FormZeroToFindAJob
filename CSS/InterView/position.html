@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height Adaptation with Positioning</title>
+  <style>
+    .container {
+      position: relative; /* 父容器相对定位 */
+      height: 100vh; /* 父容器高度自适应 */
+      background-color: lightgray;
+    }
+    .top {
+      height: 100px;
+      background-color: lightblue;
+    }
+    .bottom {
+      position: absolute; /* 子容器绝对定位 */
+      top: 100px; /* 距离顶部 100px */
+      bottom: 0; /* 底部与父容器底部对齐 */
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">Top Div (100px)</div>
+    <div class="bottom">Bottom Div (Fill Remaining Height)</div>
+  </div>
+</body>
+</html>

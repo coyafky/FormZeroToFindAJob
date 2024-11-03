@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Overlap</title>
+    <style>
+        .text-container {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .text-container span {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .text-container span:nth-child(1) {
+            z-index: 2; /* 第一个文字在上面 */
+            color: red;
+        }
+
+        .text-container span:nth-child(2) {
+            z-index: 1; /* 第二个文字在下面 */
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <span>Hello</span>
+        <span>World</span>
+    </div>
+</body>
+</html>
