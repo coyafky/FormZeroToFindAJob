@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow Example with Tailwind</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-10 space-y-10">
+    <!-- overflow-auto 示例 -->
+    <div class="bg-blue-200 p-4 w-64 h-32 overflow-auto">
+      <p>
+        This is a container with `overflow-auto`. When the content is too large,
+        a scrollbar will appear.
+      </p>
+      <p>More content...</p>
+      <p>And more content...</p>
+      <p>Even more content...</p>
+    </div>
+
+    <!-- overflow-hidden 示例 -->
+    <div class="bg-green-200 p-4 w-64 h-32 overflow-hidden">
+      <p>
+        This is a container with `overflow-hidden`. Extra content is hidden and
+        not visible outside the box.
+      </p>
+      <p>More content...</p>
+      <p>And more content...</p>
+    </div>
+
+    <!-- overflow-scroll 示例 -->
+    <div class="bg-red-200 p-4 w-64 h-32 overflow-scroll">
+      <p>
+        This is a container with `overflow-scroll`. A scrollbar is always
+        visible, even if the content fits.
+      </p>
+      <p>More content...</p>
+      <p>And more content...</p>
+      <p>Even more content...</p>
+    </div>
+
+    <!-- overflow-x-scroll 示例 -->
+    <div
+      class="bg-yellow-200 p-4 w-64 h-16 overflow-x-scroll whitespace-nowrap"
+    >
+      <p>
+        This is a container with `overflow-x-scroll`. Content will scroll
+        horizontally if it is too wide.
+      </p>
+    </div>
+
+    <!-- overflow-y-scroll 示例 -->
+    <div class="bg-purple-200 p-4 w-32 h-32 overflow-y-scroll">
+      <p>
+        This is a container with `overflow-y-scroll`. Content will scroll
+        vertically if it is too tall.
+      </p>
+      <p>More content...</p>
+      <p>And more content...</p>
+      <p>Even more content...</p>
+    </div>
+  </body>
+</html>

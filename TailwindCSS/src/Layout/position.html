@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Example with Tailwind</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-10 space-y-20">
+    <!-- static 定位 (默认) -->
+    <div class="relative bg-blue-100 p-10">
+      <div class="bg-blue-300 p-4 static">
+        Static: This is the default positioning, element flows normally in the
+        document.
+      </div>
+    </div>
+
+    <!-- fixed 定位 -->
+    <div class="relative bg-green-100 p-10">
+      <div class="bg-green-300 p-4 fixed top-4 right-4">
+        Fixed: This stays at the specified position relative to the viewport.
+      </div>
+    </div>
+
+    <!-- absolute 定位 -->
+    <div class="relative bg-red-100 p-10">
+      <div class="bg-red-300 p-4 absolute top-4 right-4">
+        Absolute: Positioned relative to the nearest positioned ancestor.
+      </div>
+    </div>
+
+    <!-- relative 定位 -->
+    <div class="relative bg-yellow-100 p-10">
+      <div class="bg-yellow-300 p-4 relative top-4 left-4">
+        Relative: Moves element from its normal position in the flow.
+      </div>
+    </div>
+
+    <!-- sticky 定位 -->
+    <div class="bg-purple-100 p-10 h-64 overflow-y-scroll">
+      <div class="bg-purple-300 p-4 sticky top-0">
+        Sticky: Sticks to the top as you scroll down in this box.
+      </div>
+      <div class="p-4">Scroll down to see sticky effect...</div>
+      <div class="p-4">More content</div>
+      <div class="p-4">More content</div>
+      <div class="p-4">More content</div>
+    </div>
+  </body>
+</html>

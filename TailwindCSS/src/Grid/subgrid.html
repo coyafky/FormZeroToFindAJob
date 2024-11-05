@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Grid Subgrid 示例</title>
+    <link rel="stylesheet" href="../output.css" />
+    <style>
+      /* 确保浏览器支持 subgrid */
+      @supports (grid-template-columns: subgrid) {
+        .grid-cols-subgrid {
+          grid-template-columns: subgrid;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="flex flex-col items-center justify-center h-screen bg-gray-100 p-4 space-y-4"
+  >
+    <!-- 父网格 -->
+    <div class="grid grid-cols-3 gap-4 w-full">
+      <div class="bg-blue-500 p-4">Item 1</div>
+      <div class="bg-green-500 p-4">Item 2</div>
+      <div class="bg-red-500 p-4">Item 3</div>
+      <div class="bg-yellow-500 p-4">Item 4</div>
+      <div class="bg-purple-500 p-4">Item 5</div>
+      <div class="bg-pink-500 p-4">Item 6</div>
+    </div>
+
+    <!-- 子网格采用父网格的列轨道 -->
+    <div class="grid grid-cols-3 gap-4 w-full">
+      <div class="bg-blue-500 p-4">Item 1</div>
+      <div class="bg-green-500 p-4">Item 2</div>
+      <div class="bg-red-500 p-4">Item 3</div>
+      <div class="grid grid-cols-subgrid gap-4">
+        <div class="bg-yellow-500 p-4">Subgrid Item 1</div>
+        <div class="bg-purple-500 p-4">Subgrid Item 2</div>
+        <div class="bg-pink-500 p-4">Subgrid Item 3</div>
+      </div>
+    </div>
+  </body>
+</html>

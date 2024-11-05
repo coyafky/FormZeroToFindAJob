@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibility Example with Tailwind</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-10 space-y-5">
+    <!-- 可见的元素 -->
+    <div class="bg-blue-200 p-4 visible">
+      This element is <strong>visible</strong>.
+    </div>
+
+    <!-- 隐藏的元素 (但仍占用空间) -->
+    <div class="bg-green-200 p-4 invisible">
+      This element is <strong>invisible</strong>, but it still occupies space.
+    </div>
+
+    <!-- 折叠的元素 (用于表格布局，通常不占用空间) -->
+    <div class="bg-red-200 p-4 collapse">
+      This element is <strong>collapsed</strong>, and does not occupy space in
+      some layouts.
+    </div>
+  </body>
+</html>

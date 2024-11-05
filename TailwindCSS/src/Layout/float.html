@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float Example with Tailwind</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-10 space-y-10">
+    <!-- float-left 示例 -->
+    <div class="bg-blue-200 p-4 float-left w-32 mr-4">Float Left</div>
+    <p>
+      This text will wrap around the floated element to the left. By applying
+      `float-left`, the text flows around the box as expected.
+    </p>
+
+    <div class="clear-both"></div>
+    <!-- 清除浮动 -->
+
+    <!-- float-right 示例 -->
+    <div class="bg-green-200 p-4 float-right w-32 ml-4">Float Right</div>
+    <p>
+      This text will wrap around the floated element to the right. By applying
+      `float-right`, the text flows around the box in a way that keeps the
+      floated element on the right.
+    </p>
+
+    <div class="clear-both"></div>
+    <!-- 清除浮动 -->
+
+    <!-- float-none 示例 -->
+    <div class="bg-red-200 p-4 float-none w-32">Float None</div>
+    <p>
+      This element has `float-none`, so it does not float and the text does not
+      wrap around it.
+    </p>
+  </body>
+</html>

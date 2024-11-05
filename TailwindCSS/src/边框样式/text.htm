@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS 边框和轮廓示例</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body
+    class="flex flex-wrap justify-center items-center h-screen bg-gray-100 p-4 space-x-4"
+  >
+    <!-- Divide 示例 -->
+    <div class="divide-y divide-gray-300">
+      <div class="p-4 bg-white">Item 1</div>
+      <div class="p-4 bg-white">Item 2</div>
+      <div class="p-4 bg-white">Item 3</div>
+    </div>
+
+    <!-- Outline 示例 -->
+    <div class="outline outline-blue-500 text-white text-center p-4 rounded-lg">
+      outline-blue-500
+    </div>
+
+    <div class="outline-none text-white text-center p-4 rounded-lg">
+      outline-none
+    </div>
+
+    <div
+      class="outline outline-2 outline-offset-2 outline-red-500 text-white text-center p-4 rounded-lg"
+    >
+      outline-red-500
+    </div>
+
+    <!-- Ring 示例 -->
+    <div class="ring ring-blue-500 text-white text-center p-4 rounded-lg">
+      ring-blue-500
+    </div>
+
+    <div class="ring-0 text-white text-center p-4 rounded-lg">ring-0</div>
+
+    <div
+      class="ring ring-4 ring-offset-2 ring-red-500 text-white text-center p-4 rounded-lg"
+    >
+      ring-red-500
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express + Tailwind CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold underline">Hello, Tailwind CSS!</h1>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        id="fetchButton"
+      >
+        Fetch Data
+      </button>
+      <div id="data" class="mt-4"></div>
+    </div>
+
+    <script>
+      document.getElementById('fetchButton').addEventListener('click', () => {
+        fetch('/api/data')
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById('data').innerText = JSON.stringify(
+              data,
+              null,
+              2
+            );
+          });
+      });
+    </script>
+  </body>
+</html>

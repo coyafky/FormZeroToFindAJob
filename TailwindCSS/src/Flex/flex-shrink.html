@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Flex Shrink 示例</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center h-screen bg-gray-100 p-4 space-y-4"
+  >
+    <!-- Flex 容器示例 -->
+    <div class="flex flex-row justify-center items-center space-x-4 w-full">
+      <div class="shrink bg-blue-500 p-4">Item 1</div>
+      <div class="shrink bg-green-500 p-4">Item 2</div>
+      <div class="shrink bg-red-500 p-4">Item 3</div>
+    </div>
+
+    <!-- 禁止缩小的项目 -->
+    <div class="flex flex-row justify-center items-center space-x-4 w-full">
+      <div class="shrink-0 bg-blue-500 p-4">Item 1</div>
+      <div class="shrink-0 bg-green-500 p-4">Item 2</div>
+      <div class="shrink-0 bg-red-500 p-4">Item 3</div>
+    </div>
+
+    <!-- 混合使用 shrink 和 shrink-0 -->
+    <div class="flex flex-row justify-center items-center space-x-4 w-full">
+      <div class="shrink bg-blue-500 p-4">Item 1</div>
+      <div class="shrink-0 bg-green-500 p-4">Item 2</div>
+      <div class="shrink bg-red-500 p-4">Item 3</div>
+    </div>
+  </body>
+</html>

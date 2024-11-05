@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Order 示例</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center h-screen bg-gray-100 p-4 space-y-4"
+  >
+    <!-- Flex 容器示例 -->
+    <div class="flex flex-row justify-center items-center space-x-4 w-full">
+      <div class="order-2 bg-blue-500 p-4">Item 1</div>
+      <div class="order-1 bg-green-500 p-4">Item 2</div>
+      <div class="order-3 bg-red-500 p-4">Item 3</div>
+    </div>
+
+    <!-- Grid 容器示例 -->
+    <div class="grid grid-cols-3 gap-4 w-full">
+      <div class="order-2 bg-blue-500 p-4">Item 1</div>
+      <div class="order-1 bg-green-500 p-4">Item 2</div>
+      <div class="order-3 bg-red-500 p-4">Item 3</div>
+    </div>
+
+    <!-- 使用 order-first 和 order-last -->
+    <div class="flex flex-row justify-center items-center space-x-4 w-full">
+      <div class="order-last bg-blue-500 p-4">Item 1</div>
+      <div class="order-first bg-green-500 p-4">Item 2</div>
+      <div class="order-none bg-red-500 p-4">Item 3</div>
+    </div>
+  </body>
+</html>
