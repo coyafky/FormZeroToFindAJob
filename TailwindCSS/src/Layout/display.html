@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="p-4">
+    <div class="mb-4">
+      When controlling the flow of text, using the CSS property
+      <span class="inline bg-blue-200 p-1 rounded">display: inline</span>
+      will cause the text inside the element to wrap normally. While using the
+      property
+      <span class="inline-block bg-green-200 p-1 rounded"
+        >display: inline-block</span
+      >
+      will wrap the element to prevent the text inside from extending beyond its
+      parent. Lastly, using the property
+      <span class="block bg-red-200 p-1 rounded">display: block</span>
+      will put the element on its own line and fill its parent.
+    </div>
+
+    <div class="p-4 bg-gray-100 rounded mb-4">
+      <div class="flow-root ...">
+        <div class="my-4 bg-yellow-200 p-2 rounded">
+          Well, let me tell you something, ...
+        </div>
+      </div>
+      <div class="flow-root ...">
+        <div class="my-4 bg-yellow-200 p-2 rounded">
+          Sure, go ahead, laugh if you want...
+        </div>
+      </div>
+    </div>
+
+    <p class="mb-4">
+      Today I spent most of the day researching ways to ...
+      <span class="inline-flex items-baseline bg-purple-200 p-1 rounded">
+        <img
+          src="https://www.loliapi.com/acg/"
+          alt=""
+          class="self-center w-5 h-5 rounded-full mx-1"
+        />
+        <span>Kramer</span>
+      </span>
+      keeps telling me there is no way to make it work, that ...
+    </p>
+
+    <div class="flex items-center bg-indigo-200 p-2 rounded mb-4">
+      <img
+        src="https://www.loliapi.com/acg/"
+        class="w-10 h-10 rounded-full mr-2"
+      />
+      <div>
+        <strong>Andrew Alfred</strong>
+        <span>Technical advisor</span>
+      </div>
+    </div>
+
+    <span class="inline-grid grid-cols-3 gap-4 bg-pink-200 p-2 rounded mb-4">
+      <span class="bg-pink-300 p-2 rounded">01</span>
+      <span class="bg-pink-300 p-2 rounded">02</span>
+      <span class="bg-pink-300 p-2 rounded">03</span>
+      <span class="bg-pink-300 p-2 rounded">04</span>
+      <span class="bg-pink-300 p-2 rounded">05</span>
+      <span class="bg-pink-300 p-2 rounded">06</span>
+    </span>
+    <span class="inline-grid grid-cols-5 gap-4 bg-pink-200 p-2 rounded mb-4">
+      <span class="bg-pink-300 p-2 rounded">01</span>
+      <span class="bg-pink-300 p-2 rounded">02</span>
+      <span class="bg-pink-300 p-2 rounded">03</span>
+      <span class="bg-pink-300 p-2 rounded">04</span>
+      <span class="bg-pink-300 p-2 rounded">05</span>
+      <span class="bg-pink-300 p-2 rounded">06</span>
+    </span>
+
+    <div class="table w-full bg-teal-200 rounded mb-4">
+      <div class="table-header-group bg-teal-300">
+        <div class="table-row">
+          <div class="table-cell text-left p-2">Song</div>
+          <div class="table-cell text-left p-2">Artist</div>
+          <div class="table-cell text-left p-2">Year</div>
+        </div>
+      </div>
+      <div class="table-row-group">
+        <div class="table-row">
+          <div class="table-cell p-2">
+            The Sliding Mr. Bones (Next Stop, Pottersville)
+          </div>
+          <div class="table-cell p-2">Malcolm Lockyer</div>
+          <div class="table-cell p-2">1961</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell p-2">Witchy Woman</div>
+          <div class="table-cell p-2">The Eagles</div>
+          <div class="table-cell p-2">1972</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell p-2">Shining Star</div>
+          <div class="table-cell p-2">Earth, Wind, and Fire</div>
+          <div class="table-cell p-2">1975</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex ...">
+      <div class="hidden ...">01</div>
+      <div>02</div>
+      <div>03</div>
+    </div>
+  </body>
+</html>

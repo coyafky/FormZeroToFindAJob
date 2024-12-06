@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object-cover 示例</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black flex items-center justify-center min-h-screen">
+
+  <div class="space-y-8">
+    <!-- 不使用 object-cover 的图片示例 -->
+    <div class="w-64 h-48 bg-gray-300 overflow-hidden rounded-lg">
+      <img src="https://www.loliapi.com/acg/" alt="示例图片" class="w-full h-full object-fill">
+      <p class="text-center mt-2">无 object-cover (使用 object-fill)</p>
+    </div>
+
+    <!-- 使用 object-cover 的图片示例 -->
+    <div class="w-64 h-48 bg-gray-300 overflow-hidden rounded-lg">
+      <img src="https://www.loliapi.com/acg/" alt="示例图片" class="w-full h-full object-cover">
+      <p class="text-center mt-2">使用 object-cover</p>
+    </div>
+  </div>
+
+</body>
+</html>

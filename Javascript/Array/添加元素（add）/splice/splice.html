@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splice Method Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 p-10">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-bold mb-4">Splice Method Demo</h1>
+
+      <!-- 输入框和按钮 -->
+      <div class="mb-4">
+        <input
+          id="itemInput"
+          type="text"
+          class="border p-2 w-full"
+          placeholder="Enter item"
+        />
+        <input
+          id="indexInput"
+          type="number"
+          class="border p-2 w-full mt-2"
+          placeholder="Enter index"
+        />
+        <button id="addButton" class="bg-blue-500 text-white p-2 w-full mt-2">
+          Add Item
+        </button>
+        <button id="removeButton" class="bg-red-500 text-white p-2 w-full mt-2">
+          Remove Item
+        </button>
+      </div>
+
+      <!-- 显示数组内容 -->
+      <div id="arrayDisplay" class="border p-4">Array: []</div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let arr = [];
+
+        // 获取 DOM 元素
+        const itemInput = document.getElementById('itemInput');
+        const indexInput = document.getElementById('indexInput');
+        const addButton = document.getElementById('addButton');
+        const removeButton = document.getElementById('removeButton');
+        const arrayDisplay = document.getElementById('arrayDisplay');
+
+        // 更新数组显示
+        function updateDisplay() {
+          arrayDisplay.textContent = `Array: [${arr.join(', ')}]`;
+        }
+
+        // 添加元素
+        addButton.addEventListener('click', () => {
+          const item = itemInput.value.trim();
+          const index = parseInt(indexInput.value, 10);
+
+          if (item && !isNaN(index) && index >= 0 && index <= arr.length) {
+            arr.splice(index, 0, item);
+            updateDisplay();
+            itemInput.value = '';
+            indexInput.value = '';
+          } else {
+            alert('Please enter a valid item and index.');
+          }
+        });
+
+        // 删除元素
+        removeButton.addEventListener('click', () => {
+          const index = parseInt(indexInput.value, 10);
+
+          if (!isNaN(index) && index >= 0 && index < arr.length) {
+            arr.splice(index, 1);
+            updateDisplay();
+            indexInput.value = '';
+          } else {
+            alert('Please enter a valid index.');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

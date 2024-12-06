@@ -1,0 +1,125 @@
+// styles.scss
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #f1f1f1;
+$font-size: 16px;
+$spacing: 20px;
+
+* {
+  margin: 0;
+}
+
+// Mixin
+@mixin button-style {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing / 4 $spacing / 2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Base Styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-size: $font-size;
+}
+
+// Navbar
+.navbar {
+  background-color: $secondary-color;
+  padding: $spacing / 2;
+
+  .nav-item {
+    display: inline-block;
+    margin-right: $spacing / 2;
+
+    .link {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing / 2;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing / 2;
+  text-align: center;
+  margin-top: $spacing;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+// Buttons
+.button {
+  @include button-style;
+}
+
+.submit-button {
+  @include button-style;
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+// Conditional Styles
+$is-dark-theme: true;
+
+body {
+  @if $is-dark-theme {
+    background-color: #333;
+    color: white;
+  } @else {
+    background-color: white;
+    color: #333;
+  }
+}
+
+// Loop
+@for $i from 1 through 3 {
+  .item-#{$i} {
+    margin-top: $spacing * $i;
+  }
+}
+
+// Calculations
+$base-width: 1000px;
+$column-count: 4;
+
+.container {
+  width: $base-width;
+  margin: 0 auto;
+}
+
+.column {
+  width: $base-width / $column-count;
+  float: left;
+  padding: $spacing / 2;
+}

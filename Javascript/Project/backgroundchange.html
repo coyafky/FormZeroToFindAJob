@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex justify-center items-center h-[100vh]">
+    <div
+      class="grid grid-cols-6 gap-4 w-auto h-16 border-1 border-black border-round bg-gray-500 place-items-center"
+      id="color"
+    >
+      <button
+        class="w-10 h-10 border-1 border-black rounded-full bg-pink-500"
+        id="one"
+      >
+        1
+      </button>
+      <button
+        class="w-10 h-10 border-1 border-black rounded-full bg-cyan-500"
+        id="two"
+      >
+        2
+      </button>
+      <button
+        class="w-10 h-10 border-1 border-black rounded-full bg-red-500"
+        id="three"
+      >
+        3
+      </button>
+      <button
+        class="w-10 h-10 border-1 border-black rounded-full bg-purple-500"
+        id="four"
+      >
+        4
+      </button>
+      <button
+        class="w-10 h-10 border-1 border-black rounded-full bg-blue-500"
+        id="five"
+      >
+        5
+      </button>
+      <button
+        class="w-10 h-10 border-1 border-black rounded-full bg-green-500"
+        id="six"
+      >
+        6
+      </button>
+    </div>
+
+    <script>
+      let one = document.getElementById('one');
+      let two = document.getElementById('two');
+      let three = document.getElementById('three');
+      let four = document.getElementById('four');
+      let five = document.getElementById('five');
+      let six = document.getElementById('six');
+      let buttons = document.querySelectorAll('color');
+      one.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'pink';
+        color.style.backgroundColor = 'pink';
+      });
+
+      two.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'cyan';
+        color.style.backgroundColor = 'cyan';
+      });
+
+      three.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'red';
+        color.style.backgroundColor = 'red';
+      });
+
+      four.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'purple';
+        color.style.backgroundColor = 'purple';
+      });
+
+      five.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'blue';
+        color.style.backgroundColor = 'blue';
+      });
+
+      six.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'green';
+        color.style.backgroundColor = 'green';
+      });
+    </script>
+  </body>
+</html>

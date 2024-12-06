@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Sticky Example</title>
+    <style>
+      /* 内容区域 */
+      .content {
+        height: 2000px;
+        background: linear-gradient(white, lightblue);
+      }
+
+      /* 固定元素模拟 */
+      .sticky-element {
+        position: sticky;
+        top: 0;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky-element">我是一个 sticky 元素</div>
+    <div class="content">滚动查看效果...</div>
+  </body>
+</html>

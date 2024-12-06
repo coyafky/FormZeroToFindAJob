@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: cyan;
-      border: 1px solid seagreen;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale X Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 50px auto;
+            transition: transform 0.5s;
+        }
 
-      transform: scaleX(1.5);
-      /* 等于 transform scaleX (1.5,1) */
-    }
-  </style>
-  <body>
-    <div class="box">content</div>
-  </body>
+        .box:hover {
+            transform: scaleX(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
 </html>

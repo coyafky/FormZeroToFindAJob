@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>计算器</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-bold mb-4">计算器</h1>
+      <div class="mb-4">
+        <label for="num1" class="block text-sm font-medium text-gray-700"
+          >数字 1</label
+        >
+        <input
+          type="number"
+          id="num1"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="num2" class="block text-sm font-medium text-gray-700"
+          >数字 2</label
+        >
+        <input
+          type="number"
+          id="num2"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="operation" class="block text-sm font-medium text-gray-700"
+          >操作</label
+        >
+        <select
+          id="operation"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+        >
+          <option value="add">加法</option>
+          <option value="subtract">减法</option>
+          <option value="multiply">乘法</option>
+          <option value="divide">除法</option>
+        </select>
+      </div>
+      <button
+        id="calculate"
+        class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700"
+      >
+        计算
+      </button>
+      <div id="result" class="mt-4 text-lg font-semibold"></div>
+    </div>
+
+    <script>
+      document
+        .getElementById('calculate')
+        .addEventListener('click', function () {
+          let num1 = parseFloat(document.getElementById('num1').value);
+          let num2 = parseFloat(document.getElementById('num2').value);
+          let operation = document.getElementById('operation').value;
+          let result;
+
+          switch (operation) {
+            case 'add':
+              result = num1 + num2;
+              break;
+            case 'subtract':
+              result = num1 - num2;
+              break;
+            case 'multiply':
+              result = num1 * num2;
+              break;
+            case 'divide':
+              if (num2 === 0) {
+                result = '除数不能为零';
+              } else {
+                result = num1 / num2;
+              }
+              break;
+            default:
+              result = '无效操作';
+          }
+
+          document.getElementById('result').textContent = `结果: ${result}`;
+        });
+    </script>
+  </body>
+</html>

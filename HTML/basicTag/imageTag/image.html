@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>image with width and height</h1>
+
+    <!-- 使用 <picture> 元素定义一组额外的图片集合 -->
+    <picture>
+      <!-- 高分辨率屏幕 -->
+      <source
+        media="(min-width: 1200px)"
+        srcset="https://www.loliapi.com/acg/"
+      />
+      <!-- 中等分辨率屏幕 -->
+      <source
+        media="(min-width: 768px)"
+        srcset="https://www.loliapi.com/acg/"
+      />
+      <!-- 默认图片 -->
+      <img
+        src="https://www.loliapi.com/acg/"
+        alt="萝莉"
+        width="200"
+        height="200"
+      />
+    </picture>
+  </body>
+</html>

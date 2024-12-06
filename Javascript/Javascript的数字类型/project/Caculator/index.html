@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+      <div
+        id="display"
+        class="bg-gray-200 text-right p-4 rounded-lg mb-4 text-2xl font-bold"
+      ></div>
+      <div class="grid grid-cols-4 gap-4">
+        <button class="btn bg-gray-300 hover:bg-gray-400">7</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">8</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">9</button>
+        <button class="btn bg-yellow-500 hover:bg-yellow-600">/</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">4</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">5</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">6</button>
+        <button class="btn bg-yellow-500 hover:bg-yellow-600">*</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">1</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">2</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">3</button>
+        <button class="btn bg-yellow-500 hover:bg-yellow-600">-</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">0</button>
+        <button class="btn bg-gray-300 hover:bg-gray-400">.</button>
+        <button class="btn bg-green-500 hover:bg-green-600">=</button>
+        <button class="btn bg-yellow-500 hover:bg-yellow-600">+</button>
+        <button class="btn col-span-4 bg-red-500 hover:bg-red-600">C</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

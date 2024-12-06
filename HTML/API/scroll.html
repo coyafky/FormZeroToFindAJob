@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Example</title>
+    <style>
+      /* 设置滚动容器的样式 */
+      #scrollContainer {
+        width: 300px;
+        height: 200px;
+        padding: 10px;
+        border: 5px solid black;
+        overflow: auto;
+        background-color: lightgray;
+      }
+
+      /* 设置滚动内容的样式 */
+      #scrollContent {
+        width: 500px;
+        height: 400px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scrollContainer">
+      <div id="scrollContent">Scroll Content</div>
+    </div>
+
+    <script>
+      // 获取滚动容器和滚动内容的引用
+      const scrollContainer = document.getElementById('scrollContainer');
+      const scrollContent = document.getElementById('scrollContent');
+
+      // 获取滚动容器的 scroll 属性
+      console.log('Scroll Container Scroll Properties:');
+      console.log('scrollWidth:', scrollContainer.scrollWidth);
+      console.log('scrollHeight:', scrollContainer.scrollHeight);
+      console.log('scrollLeft:', scrollContainer.scrollLeft);
+      console.log('scrollTop:', scrollContainer.scrollTop);
+
+      // 监听滚动事件
+      scrollContainer.addEventListener('scroll', () => {
+        console.log('Scroll Event:');
+        console.log('scrollLeft:', scrollContainer.scrollLeft);
+        console.log('scrollTop:', scrollContainer.scrollTop);
+      });
+    </script>
+  </body>
+</html>

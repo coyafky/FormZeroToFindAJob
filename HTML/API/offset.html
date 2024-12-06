@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offset Example</title>
+    <style>
+      /* 设置父元素的样式 */
+      #parent {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        border: 10px solid black;
+        background-color: lightgray;
+      }
+
+      /* 设置子元素的样式 */
+      #child {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        border: 5px solid red;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="child">Child Element</div>
+    </div>
+
+    <script>
+      // 获取父元素和子元素
+      const parentElement = document.getElementById('parent');
+      const childElement = document.getElementById('child');
+
+      // 获取父元素的 offset 属性
+      console.log('Parent Element Offset Properties:');
+      console.log('offsetWidth:', parentElement.offsetWidth);
+      console.log('offsetHeight:', parentElement.offsetHeight);
+      console.log('offsetLeft:', parentElement.offsetLeft);
+      console.log('offsetTop:', parentElement.offsetTop);
+
+      // 获取子元素的 offset 属性
+      console.log('Child Element Offset Properties:');
+      console.log('offsetWidth:', childElement.offsetWidth);
+      console.log('offsetHeight:', childElement.offsetHeight);
+      console.log('offsetLeft:', childElement.offsetLeft);
+      console.log('offsetTop:', childElement.offsetTop);
+    </script>
+  </body>
+</html>
+z

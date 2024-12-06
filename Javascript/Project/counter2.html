@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex justify-center items-center h-screen bg-gray-100">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold mb-6">Counter</h1>
+      <h2 id="value" class="text-6xl font-bold mb-6">0</h2>
+      <div class="flex justify-center space-x-4">
+        <button id="decrease" class="px-4 py-2 bg-red-500 text-white rounded">
+          Decrease
+        </button>
+        <button id="reset" class="px-4 py-2 bg-gray-500 text-white rounded">
+          Reset
+        </button>
+        <button id="increase" class="px-4 py-2 bg-green-500 text-white rounded">
+          Increase
+        </button>
+      </div>
+    </div>
+    <script>
+      // Select the value and buttons
+      const value = document.getElementById('value');
+      const btns = document.querySelectorAll('button');
+
+      // Initialize the counter
+      let count = 0;
+
+      // Add event listeners to all buttons
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function (event) {
+          const styles = event.currentTarget.id;
+
+          if (styles === 'decrease') {
+            count--;
+          } else if (styles === 'increase') {
+            count++;
+          } else if (styles === 'reset') {
+            count = 0;
+          }
+
+          // Change the color based on the count value
+          if (count > 0) {
+            value.style.color = 'green';
+          } else if (count < 0) {
+            value.style.color = 'red';
+          } else {
+            value.style.color = 'black';
+          }
+
+          // Update the value displayed
+          value.textContent = count;
+        });
+      });
+    </script>
+  </body>
+</html>

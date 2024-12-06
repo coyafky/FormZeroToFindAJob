@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulate Fixed Position Issue on Android</title>
+    <style>
+      /* 页面内容 */
+      .content {
+        height: 2000px;
+        background: linear-gradient(white, lightblue);
+      }
+
+      /* 固定元素样式 */
+      .fixed-element {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ff6347;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        transition: top 0.3s ease;
+      }
+
+      /* 模拟失效效果的样式 */
+      .fixed-element.scrolling {
+        position: absolute; /* 切换为 absolute 模拟 fixed 失效 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-element" id="fixed-element">
+      我是一个 fixed 元素，滚动时我可能会失效
+    </div>
+    <div class="content">滚动查看模拟效果...</div>
+
+    <script>
+      const fixedElement = document.getElementById('fixed-element');
+
+      // 模拟在滚动时 position: fixed 失效的效果
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          fixedElement.classList.add('scrolling');
+        } else {
+          fixedElement.classList.remove('scrolling');
+        }
+      });
+    </script>
+  </body>
+</html>

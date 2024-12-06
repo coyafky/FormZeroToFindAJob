@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scale 3D Animation</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        margin: 50px auto;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+        perspective: 500px;
+      }
+
+      .box:hover {
+        transform: scale3d(2, 2, 2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

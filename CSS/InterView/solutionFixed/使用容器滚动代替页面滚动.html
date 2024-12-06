@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container Scroll Example</title>
+    <style>
+      /* 禁用页面滚动 */
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* 滚动容器 */
+      .scroll-container {
+        height: 100%;
+        overflow-y: scroll;
+        background: linear-gradient(white, lightpink);
+      }
+
+      /* 固定元素 */
+      .fixed-element {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #4682b4;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .content {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-element">我是一个真正的固定元素</div>
+    <div class="scroll-container">
+      <div class="content">滚动查看效果...</div>
+    </div>
+  </body>
+</html>

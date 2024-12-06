@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Loading Animation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 2s linear infinite;
+        display: none;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center h-screen bg-gray-100">
+    <div class="form-container p-8 bg-white rounded shadow-lg">
+      <h1 class="text-2xl font-bold mb-6">Loading Animation</h1>
+      <form id="my-form" class="space-y-4">
+        <div>
+          <label for="username" class="block text-sm font-medium text-gray-700"
+            >Username:</label
+          >
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700"
+            >Password:</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <div class="btn-container">
+          <button
+            id="loadButton"
+            class="btn relative w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Submit
+            <div
+              class="loader absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              id="loader"
+            ></div>
+          </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById('loadButton')
+        .addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          const button = event.target;
+          const loader = document.getElementById('loader');
+
+          // Show loader and disable button
+          loader.style.display = 'block';
+          button.disabled = true;
+          button.innerHTML = 'Loading...';
+
+          // Simulate a delay (e.g., for an API call)
+          setTimeout(function () {
+            // Hide loader and enable button
+            loader.style.display = 'none';
+            button.disabled = false;
+            button.innerHTML = 'Submit';
+
+            // Optionally, you can submit the form here
+            // document.getElementById('my-form').submit();
+          }, 3000); // 3 seconds delay
+        });
+    </script>
+  </body>
+</html>

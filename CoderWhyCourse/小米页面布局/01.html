@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      .mi_wrapper {
+        width: 1226px;
+        margin: 0 auto;
+      }
+
+      .clear_fix::after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+      }
+
+      .list {
+        width: 1226px;
+        height: 628px;
+        background-color: orange;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+      }
+
+      .span4 {
+        width: 234px;
+        height: 628px;
+        background-color: blue;
+      }
+
+      .span16 {
+        width: 928px;
+        height: 628px;
+        background-color: beige;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 列 */
+        grid-template-rows: repeat(2, 1fr); /* 2 行 */
+        gap: 10px; /* 可选：设置网格项之间的间距 */
+      }
+
+      .break-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(234px, 0fr));
+      }
+
+      .listitem {
+        width: 234px;
+        height: 300px;
+
+        display: flex;
+        text-align: center;
+      }
+
+      .dress {
+        margin-top: 30px;
+      }
+
+      .dress .header {
+        height: 58px;
+        line-height: 58px;
+      }
+
+      .dress .header .left-area {
+        float: left;
+      }
+
+      .dress .header .right-area {
+        font-size: 14px;
+        float: right;
+      }
+
+      .dress .header .right-area .item {
+        margin-left: 15px;
+      }
+
+      .dress .header .right-area .item:hover {
+        padding: 3px 0;
+        border-bottom: 2px solid orange;
+        color: orange;
+      }
+
+      .listitem a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+
+      .listitem a img {
+        width: 80%;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 50px;
+      }
+
+      .text > div:nth-child(1) {
+        font-size: medium;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .text > div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #bbbbbd;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+
+      .text > div:nth-child(2) > span:not(:last-child)::after {
+        content: '|';
+        margin: 0 5px;
+      }
+
+      .text > div:nth-child(3) {
+        color: #ff7b2e;
+      }
+
+      .list-small {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mi_wrapper dress">
+      <div class="header clear_fix">
+        <div class="left-area">
+          <h3 class="title">智能穿戴</h3>
+        </div>
+
+        <div class="right-area">
+          <a href="#" class="item hot">热门</a>
+          <a href="#" class="item active info">穿戴</a>
+        </div>
+      </div>
+      <div class="list">
+        <div class="row">
+          <div class="span4">
+            <a href="https://www.mi.com/shop/buy/detail?product_id=20588">
+              <img src="./image/imageheader.png" alt="产品图片" />
+              <div class="text">
+                <div>REDMI K80 PRO</div>
+                <div>
+                  <span>晓龙8至尊版</span>
+                  <span>2K新一代屏</span>
+                  <span>全焦段影像</span>
+                </div>
+                <div>
+                  <span>3999元起</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="span16">
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=20796">
+                <img src="./image/image1.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦段影像</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=20139">
+                <img src="./image/image2.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦段影像</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=20426">
+                <img src="./image/image3.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦段影像</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=20159">
+                <img src="./image/image4.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=20081">
+                <img src="./image/image5.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦段影像</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=20007">
+                <img src="./image/image6.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦段影像</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=19827">
+                <img src="./image/image7.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦..</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="listitem">
+              <a href="https://www.mi.com/shop/buy/detail?product_id=19446">
+                <img src="./image/image8.png" alt="" />
+                <div class="text">
+                  <div>REDMI K80 PRO</div>
+                  <div>
+                    <span>晓龙8至尊版</span>
+                    <span>2K新一代屏</span>
+                    <span>全焦段影像</span>
+                  </div>
+                  <div>
+                    <span>3999元起</span>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://www.mi.com/shop/search?keyword=%E8%80%B3%E6%9C%BA"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

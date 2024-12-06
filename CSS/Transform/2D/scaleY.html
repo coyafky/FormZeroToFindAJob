@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Scale Y Example</title>
     <style>
       .box {
         width: 100px;
         height: 100px;
-        background-color: cyan;
-        border: 1px solid seagreen;
-        transform: scaleY(1.5);
-        /* 等同于 scale(1,1.5) */
+        background-color: green;
+        margin: 50px auto;
+        transition: transform 0.5s;
+      }
+
+      .box:hover {
+        transform: scaleY(2);
       }
     </style>
   </head>

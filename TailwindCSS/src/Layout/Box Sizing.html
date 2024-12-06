@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Sizing Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+  </head>
+  <body class="p-4 bg-gray-100">
+    <div class="box-border p-4 border-4 border-blue-500 mb-4">
+      <p>This element uses <code>box-sizing: border-box;</code></p>
+      <p>Width: 200px</p>
+      <p>Padding: 1rem</p>
+      <p>Border: 4px</p>
+    </div>
+
+    <div class="box-content p-4 border-4 border-red-500">
+      <p>This element uses <code>box-sizing: content-box;</code></p>
+      <p>Width: 200px</p>
+      <p>Padding: 1rem</p>
+      <p>Border: 4px</p>
+    </div>
+  </body>
+</html>

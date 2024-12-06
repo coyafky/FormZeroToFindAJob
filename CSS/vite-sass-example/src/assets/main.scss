@@ -1,0 +1,55 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #f1f1f1;
+$font-size: 16px;
+$spacing: 20px;
+
+// Styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: Arial, sans-serif;
+  padding: $spacing;
+}
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing / 2;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+main {
+  margin-top: $spacing;
+
+  section {
+    background-color: white;
+    padding: $spacing;
+    margin-bottom: $spacing;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      color: $secondary-color;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing / 2;
+  text-align: center;
+  margin-top: $spacing;
+}

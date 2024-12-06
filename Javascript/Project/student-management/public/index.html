@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management</title>
+    <script defer src="script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 p-5">
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-bold text-center mb-5">
+        Student Management System
+      </h1>
+
+      <!-- Add Student Form -->
+      <form id="student-form" class="mb-5">
+        <div class="flex space-x-4">
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            class="border rounded p-2 w-full"
+            required
+          />
+          <input
+            type="number"
+            id="age"
+            placeholder="Age"
+            class="border rounded p-2 w-full"
+            required
+          />
+          <input
+            type="text"
+            id="studentId"
+            placeholder="Student ID"
+            class="border rounded p-2 w-full"
+            required
+          />
+          <button
+            type="submit"
+            class="bg-blue-500 text-white p-2 rounded hover:bg-blue-700"
+          >
+            Add
+          </button>
+        </div>
+      </form>
+
+      <!-- Student Table -->
+      <table
+        class="table-auto border-collapse border border-gray-300 w-full text-left"
+      >
+        <thead>
+          <tr>
+            <th class="border p-2">Name</th>
+            <th class="border p-2">Age</th>
+            <th class="border p-2">Student ID</th>
+            <th class="border p-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="student-table"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

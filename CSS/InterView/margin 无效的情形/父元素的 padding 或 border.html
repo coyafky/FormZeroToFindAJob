@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        padding: 10px;
+        border: 1px solid black;
+      }
+      .child {
+        margin-top: 20px; /* 可能无效 */
+      }
+      .parent-with-overflow {
+        overflow: auto; /* 触发 BFC */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Child element with margin-top</div>
+    </div>
+    <div class="parent parent-with-overflow">
+      <div class="child">Child element with margin-top (BFC)</div>
+    </div>
+  </body>
+</html>

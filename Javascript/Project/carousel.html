@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="slider relative w-full max-w-4xl mx-auto overflow-hidden">
+      <div
+        class="slider-images flex transition-transform duration-500 ease-in-out"
+        id="sliderImages"
+      >
+        <img
+          src="https://www.loliapi.com/acg/"
+          alt="Image 1"
+          class="w-full h-auto"
+        />
+        <img
+          src="https://www.loliapi.com/acg/?id=2"
+          alt="Image 2"
+          class="w-full h-auto"
+        />
+        <img
+          src="https://www.loliapi.com/acg/?id=3"
+          alt="Image 3"
+          class="w-full h-auto"
+        />
+      </div>
+      <div
+        class="slider-buttons absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2"
+      >
+        <button
+          id="prevBtn"
+          class="bg-black bg-opacity-50 text-white border-none p-2 cursor-pointer"
+        >
+          &lt;
+        </button>
+        <button
+          id="nextBtn"
+          class="bg-black bg-opacity-50 text-white border-none p-2 cursor-pointer"
+        >
+          &gt;
+        </button>
+      </div>
+    </div>
+    <script>
+      const sliderImages = document.getElementById('sliderImages');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      let currentIndex = 0;
+
+      function showNextImage() {
+        if (currentIndex < sliderImages.children.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlider();
+      }
+
+      function showPrevImage() {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = sliderImages.children.length - 1;
+        }
+        updateSlider();
+      }
+
+      function updateSlider() {
+        const offset = -currentIndex * 100;
+        sliderImages.style.transform = `translateX(${offset}%)`;
+      }
+
+      prevBtn.addEventListener('click', showPrevImage);
+      nextBtn.addEventListener('click', showNextImage);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new list</title>
+    <style>
+      /* 基本样式 */
+      .news-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .news-item {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        position: relative; /* 确保伪元素的定位 */
+      }
+
+      /* 添加标签 */
+      .news-item::after {
+        content: attr(data-tag); /* 使用 data-tag 属性作为标签内容 */
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ff6347;
+        color: white;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+
+      /* 针对不同标签的样式 */
+      .news-item.hot::after {
+        content: 'Hot';
+        background-color: #ff6347; /* 红色 */
+      }
+
+      .news-item.new::after {
+        content: 'New';
+        background-color: #3498db; /* 蓝色 */
+      }
+
+      .news-item.breaking::after {
+        content: 'Breaking';
+        background-color: #f39c12; /* 橙色 */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="news-list">
+        <li class="news-item hot">
+          Breaking News: Lorem ipsum dolor sit amet.
+        </li>
+        <li class="news-item new">New Article: Consectetur adipiscing elit.</li>
+        <li class="news-item breaking">
+          Hot Topic: Sed do eiusmod tempor incididunt.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

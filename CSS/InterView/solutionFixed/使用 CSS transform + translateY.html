@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform TranslateY Example</title>
+    <style>
+      .content {
+        height: 2000px;
+        background: linear-gradient(white, lightgreen);
+      }
+
+      .fixed-element {
+        position: absolute;
+        width: 100%;
+        background-color: #ffa500;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        transform: translateY(var(--scroll-y, 0px));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-element">我是一个 Transform 模拟的固定元素</div>
+    <div class="content">滚动查看效果...</div>
+
+    <script>
+      // 监听滚动事件
+      window.addEventListener('scroll', () => {
+        document.documentElement.style.setProperty(
+          '--scroll-y',
+          `${window.scrollY}px`
+        );
+      });
+    </script>
+  </body>
+</html>

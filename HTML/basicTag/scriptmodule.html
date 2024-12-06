@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script Module Example</title>
+  </head>
+  <body>
+    <h1>Script Module Example</h1>
+    <script type="module">
+      // 导入模块
+      import { greet, version, Person } from './module.js';
+
+      // 使用导入的函数
+      console.log(greet('Alice')); // 输出: Hello, Alice!
+
+      // 使用导入的变量
+      console.log('Version:', version); // 输出: Version: 1.0.0
+
+      // 使用导入的类
+      const person = new Person('Bob');
+      console.log(person.sayHello()); // 输出: Hello, my name is Bob.
+    </script>
+  </body>
+</html>

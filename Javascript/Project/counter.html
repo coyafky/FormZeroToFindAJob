@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-300 h-[100vh] flex justify-center items-center">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-4xl font-bold .m-4">Counter</h1>
+      <h1 class="text-3xl font-bold mb-4">
+        <span id="count">0</span>
+      </h1>
+      <div class="flex flex-row justify-between items-center">
+        <button
+          class="bg-blue-500 text-white px-4 py-2 border-1 rounded mx-2 hover:bg-pink-500"
+          id="increment"
+        >
+          Increment
+        </button>
+        <button
+          class="bg-red-500 text-white px-4 py-2 border-1 rounded mx-2 hover:bg-pink-500"
+          id="decrement"
+        >
+          Decrement
+        </button>
+        <button
+          class="bg-gray-500 text-red px-4 py-2 border-1 rounded mx-2 hover:bg-pink-500"
+          id="reset"
+        >
+          Reset
+        </button>
+      </div>
+      <script>
+        let count = 0;
+        let countEl = document.getElementById('count');
+        let increment = document.getElementById('increment');
+        let decrement = document.getElementById('decrement');
+        let reset = document.getElementById('reset');
+
+        increment.addEventListener('click', () => {
+          count += 1;
+          countEl.innerText = count;
+        });
+
+        decrement.addEventListener('click', () => {
+          count -= 1;
+          countEl.innerText = count;
+        });
+
+        // 	increment 按钮：当点击时，将 count 增加 1，并更新显示在页面上的计数值。
+        reset.addEventListener('click', () => {
+          count = 0;
+          countEl.innerText = count;
+        });
+
+        console.log(count);
+      </script>
+    </div>
+  </body>
+</html>

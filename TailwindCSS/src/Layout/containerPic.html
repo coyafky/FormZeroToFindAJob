@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>固定宽度图片组件</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <!-- 固定宽度图片组件 -->
+    <div class="container mx-auto p-4 bg-white shadow-md rounded-lg">
+      <h2 class="text-center text-2xl font-semibold mb-4">固定宽度图片组件</h2>
+
+      <!-- 图片 -->
+      <img
+        src="https://www.loliapi.com/acg/"
+        alt="随机图片"
+        class="w-full h-auto rounded-lg object-cover"
+      />
+
+      <p class="mt-4 text-center text-gray-600">
+        这张图片的宽度会根据断点调整，始终保持当前断点的最大宽度。
+      </p>
+    </div>
+  </body>
+</html>

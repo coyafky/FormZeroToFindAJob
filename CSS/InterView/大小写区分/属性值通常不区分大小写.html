@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Value Case Insensitivity</title>
+    <style>
+      .red-text {
+        color: red; /* 有效的值 */
+      }
+      .blue-text {
+        color: BLUE; /* 有效的值，因为颜色值不区分大小写 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red-text">This text should be red.</div>
+    <div class="blue-text">This text should be blue.</div>
+  </body>
+</html>

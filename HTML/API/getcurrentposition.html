@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolocation Example</title>
+  </head>
+  <body>
+    <h1>Geolocation Example</h1>
+    <button id="getLocation">Get My Location</button>
+    <p id="location"></p>
+
+    <script>
+      // 获取按钮和显示位置的元素
+      const button = document.getElementById('getLocation');
+      const locationElement = document.getElementById('location');
+
+      // 点击按钮时获取用户位置
+      button.addEventListener('click', () => {
+        // 检查浏览器是否支持 Geolocation API
+        if ('geolocation' in navigator) {
+          // 获取用户当前位置
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              // 成功获取位置信息
+              const latitude = position.coords.latitude;
+              const longitude = position.coords.longitude;
+              const accuracy = position.coords.accuracy;
+
+              // 显示位置信息
+              locationElement.textContent = `Latitude: ${latitude}, Longitude: ${longitude}, Accuracy: ${accuracy} meters`;
+            },
+            (error) => {
+              // 获取位置信息失败
+              switch (error.code) {
+                case error.PERMISSION_DENIED:
+                  locationElement.textContent =
+                    'User denied the request for Geolocation.';
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  locationElement.textContent =
+                    'Location information is unavailable.';
+                  break;
+                case error.TIMEOUT:
+                  locationElement.textContent =
+                    'The request to get user location timed out.';
+                  break;
+                case error.UNKNOWN_ERROR:
+                  locationElement.textContent = 'An unknown error occurred.';
+                  break;
+              }
+            },
+            {
+              enableHighAccuracy: true, // 启用高精度定位
+              timeout: 5000, // 超时时间（毫秒）
+              maximumAge: 0, // 缓存时间（毫秒）
+            }
+          );
+        } else {
+          // 浏览器不支持 Geolocation API
+          locationElement.textContent =
+            'Geolocation is not supported by this browser.';
+        }
+      });
+    </script>
+  </body>
+</html>

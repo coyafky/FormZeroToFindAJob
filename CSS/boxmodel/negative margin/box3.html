@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        background-color: lightpink;
+      }
+
+      .child {
+        width: 100px;
+        height: 50px;
+        background-color: lightblue;
+        margin-top: -20px; /* 负外边距导致父元素高度塌陷 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">子元素</div>
+    </div>
+  </body>
+</html>
