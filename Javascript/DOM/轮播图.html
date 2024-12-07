@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM 轮播图</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .carousel {
+        overflow: hidden;
+        position: relative;
+      }
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+      }
+      .carousel-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        box-sizing: border-box;
+      }
+      .carousel-controls button {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .carousel-controls button:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 p-10">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-bold mb-4">JavaScript DOM 轮播图</h1>
+      <div id="carousel" class="carousel">
+        <div id="carouselInner" class="carousel-inner">
+          <div class="carousel-item">
+            <img
+              src="https://via.placeholder.com/800x400?text=Slide+1"
+              alt="Slide 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://via.placeholder.com/800x400?text=Slide+2"
+              alt="Slide 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://via.placeholder.com/800x400?text=Slide+3"
+              alt="Slide 3"
+            />
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="prevBtn">&lt;</button>
+          <button id="nextBtn">&gt;</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carouselInner = document.getElementById('carouselInner');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slides = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+        let autoScrollInterval;
+
+        // 初始化轮播图
+        function initCarousel() {
+          updateCarousel();
+          startAutoScroll();
+        }
+
+        // 更新轮播图
+        function updateCarousel() {
+          const offset = -currentIndex * 100;
+          carouselInner.style.transform = `translateX(${offset}%)`;
+        }
+
+        // 自动滚动
+        function startAutoScroll() {
+          autoScrollInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+          }, 3000);
+        }
+
+        // 停止自动滚动
+        function stopAutoScroll() {
+          clearInterval(autoScrollInterval);
+        }
+
+        // 上一张
+        prevBtn.addEventListener('click', () => {
+          stopAutoScroll();
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateCarousel();
+          startAutoScroll();
+        });
+
+        // 下一张
+        nextBtn.addEventListener('click', () => {
+          stopAutoScroll();
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateCarousel();
+          startAutoScroll();
+        });
+
+        // 初始化轮播图
+        initCarousel();
+      });
+    </script>
+  </body>
+</html>

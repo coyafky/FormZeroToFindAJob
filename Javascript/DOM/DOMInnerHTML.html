@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerText Example</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <p>这是一个段落。</p>
+      <ul>
+        <li>列表项 1</li>
+        <li>列表项 2</li>
+      </ul>
+    </div>
+
+    <script>
+      const myDiv = document.getElementById('myDiv');
+      console.log(myDiv.innerHTML);
+
+      myDiv.innerHTML = `
+        <p>这是一个新的段落。</p>
+        <ul>
+          <li>新的列表项 1</li>
+          <li>新的列表项 2</li>
+        </ul>
+      `;
+      // 注意：使用 innerHTML 时要小心，确保输入的内容是安全的，以防止潜在的安全风险。
+    </script>
+  </body>
+</html>

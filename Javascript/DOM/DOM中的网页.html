@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <h1>我是一个标题</h1>
+      <p>我是一个段落</p>
+
+      <ul>
+        <li>我是一个li</li>
+        <li>我是一个li</li>
+        <li>我是一个li</li>
+        <li>我是一个li</li>
+      </ul>
+    </div>
+    <input type="text" />
+    <button name="why" id="btn">我是一个按钮</button>
+    <script>
+      // 1. 获取元素
+      const bodyEl = document.body;
+      const childrenEls = bodyEl.children;
+      console.log(childrenEls);
+
+      // 获取box元素
+      const boxEl2 = bodyEl.firstElementChild;
+      const boxEl = bodyEl.children[0];
+      console.log(boxEl === boxEl2); // true
+
+      // 获取ul元素
+      const ulEl = boxEl.children[2];
+      const ulEL = boxEl.lastElementChild;
+      console.log(ulEL);
+      console.log(ulEl);
+
+      console.log(ulEl === ulEL); // true
+    </script>
+  </body>
+</html>

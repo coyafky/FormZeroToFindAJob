@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerText vs textContent</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">
+      <p>这是一个段落。</p>
+      <p class="hidden">这是一个隐藏的段落。</p>
+      <ul>
+        <li>列表项 1</li>
+        <li>列表项 2</li>
+      </ul>
+    </div>
+
+    <script>
+      // 获取元素
+      const myDiv = document.getElementById('myDiv');
+
+      // 获取 innerText
+      const innerTextContent = myDiv.innerText;
+      console.log('innerText:', innerTextContent);
+      // 输出:
+      // innerText: 这是一个段落。
+      // 列表项 1
+      // 列表项 2
+
+      // 获取 textContent
+      const textContent = myDiv.textContent;
+      console.log('textContent:', textContent);
+      // 输出:
+      // textContent: 这是一个段落。
+      // 这是一个隐藏的段落。
+      // 列表项 1
+      // 列表项 2
+    </script>
+  </body>
+</html>

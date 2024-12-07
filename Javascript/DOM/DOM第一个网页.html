@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <h1>我是一个标题</h1>
+      <p>我是一个段落</p>
+
+      <ul>
+        <li>我是一个li</li>
+        <li>我是一个li</li>
+        <li>我是一个li</li>
+        <li>我是一个li</li>
+      </ul>
+    </div>
+    <input type="text" />
+    <button name="why" id="btn">我是一个按钮</button>
+    <script>
+      // 1. 获取元素
+      const box = document.querySelector('.box'); // 使用querySelector获取单个元素
+      // 2. 操作元素
+      box.style.backgroundColor = 'red';
+      // 3. 给元素添加事件
+      const btn = document.getElementById('btn');
+      btn.addEventListener('click', function () {
+        alert('我被点击了');
+      });
+    </script>
+  </body>
+</html>
